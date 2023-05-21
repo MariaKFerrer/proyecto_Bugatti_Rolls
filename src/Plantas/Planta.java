@@ -167,6 +167,7 @@ public class Planta {
 
         vecProdChasis = new ProductorChasis[maxEmpleados];
         vecProdCarroc = new ProductorCarroceria[maxEmpleados];
+//        System.out.println(prodChasis);
 
     }
 

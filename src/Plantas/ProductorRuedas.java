@@ -10,14 +10,14 @@ import java.util.concurrent.Semaphore;
  *
  * @author Marcelo
  */
-public class ProductorCarroceria extends Thread {
+public class ProductorRuedas extends Thread {
 
     private Semaphore productor, mutex, ensamblador;
     private Drive drive;
     private boolean activo = true;
     private int num;
 
-    public ProductorCarroceria(Drive drive, Semaphore productor, Semaphore mutex, Semaphore ensamblador, int num) {
+    public ProductorRuedas(Drive drive, Semaphore productor, Semaphore mutex, Semaphore ensamblador, int num) {
         this.productor = productor;
         this.mutex = mutex;
         this.ensamblador = ensamblador;
@@ -31,18 +31,16 @@ public class ProductorCarroceria extends Thread {
             try {
                 productor.acquire();
 
-                if (0 <= num && num < 3) {
-                    this.sleep(Planta.DiaDuracion * 2);
-                } else if (3 <= num && num < 6) {
-                    this.sleep(Planta.DiaDuracion * 3);
+                if (0 <= num && num < 5) {
+                    this.sleep(Planta.DiaDuracion / 3);
                 } else {
-                    this.sleep(Planta.DiaDuracion * 4);
+                    this.sleep(Planta.DiaDuracion / 5);
                 }
                 mutex.acquire();
-                drive.producirCarroceria();
+                drive.producirRuedas();
 
-                Planta.Carroceria++;
-                System.out.println("Chasis: " + Planta.Carroceria);
+                Planta.Ruedas++;
+                System.out.println("Ruedas: " + Planta.Ruedas);
                 mutex.release();
                 ensamblador.release();
 
