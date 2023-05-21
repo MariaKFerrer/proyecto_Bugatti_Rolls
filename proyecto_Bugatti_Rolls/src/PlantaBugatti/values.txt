@@ -1,0 +1,13 @@
+DiaDuracion:     3           
+DiasParaEntrega: 30          
+chasisDrive:     0           
+carroceriaDrive:      0           
+motorDrive:       0           
+ruedasDrive:     0           
+accesDrive:       0           
+prodChasis:      0           
+prodCarroceria:       0           
+prodMotor:        0           
+prodRuedas:      0           
+prodAcces:        0           
+ensamblador:     0        
