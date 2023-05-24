@@ -78,7 +78,7 @@ public class PlantaR {
     }
 
     public void iniciarValores() throws InterruptedException, FileNotFoundException {
-        Scanner doc = new Scanner(new File("src/Plantas/values.txt"));
+        Scanner doc = new Scanner(new File("src/PlantaRolls/values.txt"));
         String line = doc.nextLine();
 
         DiaDuracion = parseInt(line.substring(17, 25).trim());
