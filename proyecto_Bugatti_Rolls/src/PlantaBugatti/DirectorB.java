@@ -15,6 +15,7 @@ public class DirectorB extends Thread {
 
     Semaphore reloj = new Semaphore(1);
     Semaphore vehiculo = new Semaphore(1);
+    
     public static int diasParaEntrega;
     public static String DIR;
     public static int contadorRM = 0;

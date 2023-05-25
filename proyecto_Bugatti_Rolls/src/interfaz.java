@@ -26,26 +26,267 @@ public class interfaz extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        DiasLabelB = new javax.swing.JLabel();
+        DiasRestantes = new javax.swing.JTextField();
+        labelGerenteB = new javax.swing.JLabel();
+        LabelDirecB = new javax.swing.JLabel();
+        SalarioGB = new javax.swing.JTextField();
+        DirectorB = new javax.swing.JTextField();
+        FaltasGB = new javax.swing.JTextField();
+        labelFaltasGB = new javax.swing.JLabel();
+        labelSalarioG = new javax.swing.JLabel();
+        labelDiasR = new javax.swing.JLabel();
+        DiasRestantesR = new javax.swing.JTextField();
+        salarioGerR = new javax.swing.JLabel();
+        LabelGerR1 = new javax.swing.JLabel();
+        FaltasGerR = new javax.swing.JLabel();
+        faltasGerR = new javax.swing.JTextField();
+        faltasGerR1 = new javax.swing.JTextField();
+        labeldirecR = new javax.swing.JLabel();
+        DirectorR = new javax.swing.JTextField();
+        labelPlanta = new javax.swing.JLabel();
+        labelCarroc = new javax.swing.JLabel();
+        labelChasis1 = new javax.swing.JLabel();
+        labelCarroc1 = new javax.swing.JLabel();
+        labelCarroc2 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        empleadosChasis = new javax.swing.JSpinner();
+        cantidadChasis = new javax.swing.JTextField();
+        plantaRlabel = new javax.swing.JLabel();
+        ensamblaRlabel = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        gananciasRlabel = new javax.swing.JLabel();
+        GananciasR = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        botonEmpEnsB = new javax.swing.JButton();
+        jSpinner1 = new javax.swing.JSpinner();
+        cantidadVehB = new javax.swing.JTextField();
+        GananciasB = new javax.swing.JTextField();
+        Background = new javax.swing.JLabel();
+
+        jLabel1.setText("jLabel1");
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 810, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
-        );
+        DiasLabelB.setForeground(new java.awt.Color(255, 255, 255));
+        DiasLabelB.setText("Dias restantes: ");
+        add(DiasLabelB, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 680));
+        DiasRestantes.setBackground(new java.awt.Color(0, 102, 153));
+        DiasRestantes.setForeground(new java.awt.Color(255, 255, 255));
+        add(DiasRestantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 60, 30));
+
+        labelGerenteB.setForeground(new java.awt.Color(255, 255, 255));
+        labelGerenteB.setText("Gerente");
+        add(labelGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 60, 20));
+
+        LabelDirecB.setForeground(new java.awt.Color(255, 255, 255));
+        LabelDirecB.setText("Director");
+        add(LabelDirecB, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, -1, -1));
+
+        SalarioGB.setBackground(new java.awt.Color(0, 102, 153));
+        SalarioGB.setForeground(new java.awt.Color(255, 255, 255));
+        add(SalarioGB, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 60, -1));
+
+        DirectorB.setBackground(new java.awt.Color(0, 102, 153));
+        DirectorB.setForeground(new java.awt.Color(255, 255, 255));
+        add(DirectorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 70, -1));
+
+        FaltasGB.setBackground(new java.awt.Color(0, 102, 153));
+        FaltasGB.setForeground(new java.awt.Color(255, 255, 255));
+        add(FaltasGB, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 60, -1));
+
+        labelFaltasGB.setForeground(new java.awt.Color(255, 255, 255));
+        labelFaltasGB.setText("Faltas");
+        add(labelFaltasGB, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, -1, 20));
+
+        labelSalarioG.setForeground(new java.awt.Color(255, 255, 255));
+        labelSalarioG.setText("Salario");
+        add(labelSalarioG, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, -1, -1));
+
+        labelDiasR.setForeground(new java.awt.Color(255, 255, 255));
+        labelDiasR.setText("Dias Restantes");
+        labelDiasR.setToolTipText("");
+        add(labelDiasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, -1, -1));
+
+        DiasRestantesR.setBackground(new java.awt.Color(0, 102, 153));
+        DiasRestantesR.setForeground(new java.awt.Color(255, 255, 255));
+        add(DiasRestantesR, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, 70, -1));
+
+        salarioGerR.setForeground(new java.awt.Color(255, 255, 255));
+        salarioGerR.setText("Salario");
+        add(salarioGerR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 130, -1, 10));
+
+        LabelGerR1.setForeground(new java.awt.Color(255, 255, 255));
+        LabelGerR1.setText("Gerente");
+        add(LabelGerR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, -1, -1));
+
+        FaltasGerR.setForeground(new java.awt.Color(255, 255, 255));
+        FaltasGerR.setText("Faltas");
+        add(FaltasGerR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 100, -1, 10));
+
+        faltasGerR.setBackground(new java.awt.Color(0, 102, 153));
+        faltasGerR.setForeground(new java.awt.Color(255, 255, 255));
+        faltasGerR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                faltasGerRActionPerformed(evt);
+            }
+        });
+        add(faltasGerR, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 120, 60, -1));
+
+        faltasGerR1.setBackground(new java.awt.Color(0, 102, 153));
+        faltasGerR1.setForeground(new java.awt.Color(255, 255, 255));
+        add(faltasGerR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 90, 60, -1));
+
+        labeldirecR.setForeground(new java.awt.Color(255, 255, 255));
+        labeldirecR.setText("Director");
+        add(labeldirecR, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 70, -1, -1));
+
+        DirectorR.setBackground(new java.awt.Color(0, 102, 153));
+        DirectorR.setForeground(new java.awt.Color(255, 255, 255));
+        add(DirectorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 90, 70, -1));
+
+        labelPlanta.setForeground(new java.awt.Color(255, 255, 255));
+        labelPlanta.setText("Planta");
+        add(labelPlanta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+
+        labelCarroc.setForeground(new java.awt.Color(255, 255, 255));
+        labelCarroc.setText("Ruedas");
+        add(labelCarroc, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
+
+        labelChasis1.setForeground(new java.awt.Color(255, 255, 255));
+        labelChasis1.setText("Chasis");
+        add(labelChasis1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
+
+        labelCarroc1.setForeground(new java.awt.Color(255, 255, 255));
+        labelCarroc1.setText("Carroceria");
+        add(labelCarroc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+
+        labelCarroc2.setForeground(new java.awt.Color(255, 255, 255));
+        labelCarroc2.setText("Motor");
+        add(labelCarroc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Empleados");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, -1, -1));
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Cantidad de piezas");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, -1, -1));
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Ensambladores");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
+        add(empleadosChasis, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 70, -1));
+
+        cantidadChasis.setBackground(new java.awt.Color(0, 102, 153));
+        cantidadChasis.setForeground(new java.awt.Color(255, 255, 255));
+        add(cantidadChasis, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 80, -1));
+
+        plantaRlabel.setForeground(new java.awt.Color(255, 255, 255));
+        plantaRlabel.setText("Planta");
+        add(plantaRlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, -1, -1));
+
+        ensamblaRlabel.setForeground(new java.awt.Color(255, 255, 255));
+        ensamblaRlabel.setText("Ensambladores");
+        add(ensamblaRlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, -1, -1));
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Ganancias");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, 10));
+
+        gananciasRlabel.setForeground(new java.awt.Color(255, 255, 255));
+        gananciasRlabel.setText("Ganancias");
+        add(gananciasRlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, -1, 10));
+
+        GananciasR.setBackground(new java.awt.Color(0, 102, 153));
+        GananciasR.setForeground(new java.awt.Color(255, 255, 255));
+        add(GananciasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 420, 90, -1));
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(0, 102, 153));
+        jButton1.setText("Enter");
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 60, -1));
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Empleados");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, -1, -1));
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Cantidad de Vehiculos");
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, -1, -1));
+
+        botonEmpEnsB.setForeground(new java.awt.Color(0, 102, 153));
+        botonEmpEnsB.setText("Enter");
+        add(botonEmpEnsB, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 70, -1));
+        add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 70, -1));
+
+        cantidadVehB.setBackground(new java.awt.Color(0, 102, 153));
+        cantidadVehB.setForeground(new java.awt.Color(255, 255, 255));
+        add(cantidadVehB, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 370, 90, -1));
+
+        GananciasB.setBackground(new java.awt.Color(0, 102, 153));
+        GananciasB.setForeground(new java.awt.Color(255, 255, 255));
+        add(GananciasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 420, 80, -1));
+
+        Background.setBackground(new java.awt.Color(255, 255, 255));
+        Background.setForeground(new java.awt.Color(255, 255, 255));
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/Sirve2.png"))); // NOI18N
+        add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void faltasGerRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faltasGerRActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_faltasGerRActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel Background;
+    private javax.swing.JLabel DiasLabelB;
+    private javax.swing.JTextField DiasRestantes;
+    private javax.swing.JTextField DiasRestantesR;
+    private javax.swing.JTextField DirectorB;
+    private javax.swing.JTextField DirectorR;
+    private javax.swing.JTextField FaltasGB;
+    private javax.swing.JLabel FaltasGerR;
+    private javax.swing.JTextField GananciasB;
+    private javax.swing.JTextField GananciasR;
+    private javax.swing.JLabel LabelDirecB;
+    private javax.swing.JLabel LabelGerR1;
+    private javax.swing.JTextField SalarioGB;
+    private javax.swing.JButton botonEmpEnsB;
+    private javax.swing.JTextField cantidadChasis;
+    private javax.swing.JTextField cantidadVehB;
+    private javax.swing.JSpinner empleadosChasis;
+    private javax.swing.JLabel ensamblaRlabel;
+    private javax.swing.JTextField faltasGerR;
+    private javax.swing.JTextField faltasGerR1;
+    private javax.swing.JLabel gananciasRlabel;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JLabel labelCarroc;
+    private javax.swing.JLabel labelCarroc1;
+    private javax.swing.JLabel labelCarroc2;
+    private javax.swing.JLabel labelChasis1;
+    private javax.swing.JLabel labelDiasR;
+    private javax.swing.JLabel labelFaltasGB;
+    private javax.swing.JLabel labelGerenteB;
+    private javax.swing.JLabel labelPlanta;
+    private javax.swing.JLabel labelSalarioG;
+    private javax.swing.JLabel labeldirecR;
+    private javax.swing.JLabel plantaRlabel;
+    private javax.swing.JLabel salarioGerR;
     // End of variables declaration//GEN-END:variables
 }

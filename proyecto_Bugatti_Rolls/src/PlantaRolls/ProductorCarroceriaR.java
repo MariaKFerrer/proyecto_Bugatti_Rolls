@@ -26,30 +26,31 @@ public class ProductorCarroceriaR extends Thread {
     }
     
      @Override
-    public void run(){
-         while (activo) {
+    public void run() {
+        while (activo) {
             try {
-                productor.acquire();
-                
-                if(0 <= num && num < 3){
-                    this.sleep(PlantaR.DiaDuracion * 2);
-                } else if(3 <= num && num < 6){
-                    this.sleep(PlantaR.DiaDuracion * 3);
-                } else{
-                    this.sleep(PlantaR.DiaDuracion * 4);
-                }
-                mutex.acquire();
-                drive.producirCarroceria();
-                
-                PlantaR.Carroceria++;
-                System.out.println("Chasis: " + PlantaR.Carroceria );
-                mutex.release();
-                ensamblador.release();
-                
-                
+
+                    productor.acquire();
+
+                    if (0 <= num && num < 3) {
+                        this.sleep(PlantaR.DiaDuracion * 2);
+                    } else if (3 <= num && num < 6) {
+                        this.sleep(PlantaR.DiaDuracion * 3);
+                    } else {
+                        this.sleep(PlantaR.DiaDuracion * 4);
+                    }
+                    mutex.acquire();
+                    drive.producirCarroceria();
+
+                    PlantaR.Carroceria++;
+//                    System.out.println("Chasis: " + PlantaB.Carroceria);
+                    mutex.release();
+
+
             } catch (Exception e) {
             }
-    }}
+        }
+    }
   
 }
 
