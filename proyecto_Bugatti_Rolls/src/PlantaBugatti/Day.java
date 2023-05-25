@@ -12,11 +12,26 @@ public class Day extends Thread {
     
     public static int day;
     public int counter;
+    public static boolean activo = true;
     
     public Day(){
-        this.day = 0;
+        this.day = PlantaB.DiasParaEntrega;
         this.counter = 0;
         
+    }
+    
+    @Override
+    public void run(){
+        while(activo){
+            try {
+                Thread.sleep(PlantaB.DiaDuracion);
+                System.out.println("\n Dia: " + (day-1));
+                day--;
+//                director.mes--
+            } catch (Exception e) {
+                System.out.println("Error");
+            }
+        }
     }
     
 }

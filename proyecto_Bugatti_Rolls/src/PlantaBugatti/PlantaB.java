@@ -18,7 +18,7 @@ import java.util.concurrent.Semaphore;
 public class PlantaB {
 
     Drive driveChasis; // buffer de chasis
-    Drive driverCarroceria;
+    Drive driveCarroceria;
     Drive driveMotor;
     Drive driveRuedas;
     Drive driveAcces;
@@ -27,11 +27,12 @@ public class PlantaB {
     public static int DiasParaEntrega;
     public int maxEmpleados;
 
-    public static int Chasis;
-    public static int Carroceria;
-    public static int Motor;
-    public static int Ruedas;
-    public static int Acces;
+    public static int Chasis; // numero de chasis
+    public static int Carroceria; // numero de Carroceria
+    public static int Motor; // numero de Motor
+    public static int Ruedas; // numero de Ruedas
+    public static int Acces; // numero de Accesosios
+    public static int vehiculo; // numero de vehiculos
 
     public static int prodChasis;
     public static int prodCarroceria;
@@ -48,8 +49,17 @@ public class PlantaB {
 
     public static ProductorChasisB[] vecProdChasis;
     public static ProductorCarroceriaB[] vecProdCarroc;
+    public static ProductorMotorB[] vecProdMotor;
+    public static ProductorRuedasB[] vecProdRuedas;
+    public static ProductorAccesoriosB[] vecProdAcc;
+    public static EnsambladorB[] vecEnsamblador;
+    
     public static int posVecCarroc;
     public static int posVecChasis;
+    public static int posVecMotor;
+    public static int posVecRuedas;
+    public static int posVecAcc;
+    public static int posEnsamb;
 
     // semaforos p= productores , m = mutex , e = ensamblador
     Semaphore pChasis;
@@ -69,20 +79,28 @@ public class PlantaB {
     Semaphore eMotor = new Semaphore(0);
     Semaphore eRuedas = new Semaphore(0);
     Semaphore eAcces = new Semaphore(0);
+    
+    Semaphore Reloj = new Semaphore(1);
+    
+    Semaphore Vehiculo = new Semaphore(1);
 
     public PlantaB(int num) {
         this.maxEmpleados = num + 10;
     }
 
     public void iniciarValores() throws InterruptedException, FileNotFoundException {
-        Scanner doc = new Scanner(new File("src/Plantas/values.txt"));
+        
+        vehiculo = 0;
+        
+        
+        Scanner doc = new Scanner(new File("src/PlantaBugatti/values.txt"));
         String line = doc.nextLine();
 
         DiaDuracion = parseInt(line.substring(17, 25).trim());
         if (DiaDuracion < 1) {
             DiaDuracion = 5;
         }
-        DiaDuracion = DiaDuracion * 1000;
+        DiaDuracion = DiaDuracion * 500;
 
         line = doc.nextLine();
 
@@ -95,34 +113,34 @@ public class PlantaB {
         chasisDrive = parseInt(line.substring(17, 25).trim());
         line = doc.nextLine();
         if (chasisDrive < 1) {
-            chasisDrive = 50;
+            chasisDrive = 25;
         }
 
         carroceriaDrive = parseInt(line.substring(17, 25).trim());
         line = doc.nextLine(); //Almacenamiento de carroceria en el Drive
         if (carroceriaDrive < 1) {
-            carroceriaDrive = 30;
+            carroceriaDrive = 20;
         }
 
         motorDrive = parseInt(line.substring(17, 25).trim());
         line = doc.nextLine(); //Almacenamiento de motor en el Drive
         if (motorDrive < 1) {
-            motorDrive = 25;
+            motorDrive = 55;
         }
 
         ruedasDrive = parseInt(line.substring(17, 25).trim());
         line = doc.nextLine(); //Almacenamiento de ruedas en el Drive
         if (ruedasDrive < 1) {
-            ruedasDrive = 55;
+            ruedasDrive = 35;
         }
         accesDrive = parseInt(line.substring(17, 25).trim());
         line = doc.nextLine(); //Almacenamiento de accesorios en el Drive
         if (accesDrive < 1) {
-            accesDrive = 40;
+            accesDrive = 10;
         }
 
         driveChasis = new Drive();
-        driverCarroceria = new Drive();
+        driveCarroceria = new Drive();
         driveRuedas = new Drive();
         driveMotor = new Drive();
         driveAcces = new Drive();
@@ -158,6 +176,9 @@ public class PlantaB {
         }
 
         ensamblador = parseInt(line.substring(17, 25).trim()); //Numeros de ensambladores 
+        if(ensamblador <1 ){
+            ensamblador = 1;
+        }
 
         pChasis = new Semaphore(chasisDrive);
         pCarroceria = new Semaphore(carroceriaDrive);
@@ -167,18 +188,101 @@ public class PlantaB {
 
         vecProdChasis = new ProductorChasisB[maxEmpleados];
         vecProdCarroc = new ProductorCarroceriaB[maxEmpleados];
-
+        vecProdAcc = new ProductorAccesoriosB[maxEmpleados];
+        vecProdMotor = new ProductorMotorB[maxEmpleados];
+        vecProdRuedas = new ProductorRuedasB[maxEmpleados];
+        vecEnsamblador = new EnsambladorB[maxEmpleados];
     }
 
     public void Start() throws ParseException, InterruptedException, FileNotFoundException {
+        
         iniciarValores();
+        crearContadorDias();
+        crearDirector();
+        crearGerente();
+        
+        if((prodAcces + prodCarroceria + prodChasis + prodMotor + prodRuedas + ensamblador) <= maxEmpleados){
+            for (int i = 0; i < prodAcces; i++) {
+                productorAcce();
+            }
+            
+            for (int i = 0; i < prodCarroceria; i++) {
+                productorCarroc();
+            }
+            
+            for (int i = 0; i < prodChasis; i++) {
+                productorChasis();
+            }
+            
+            for (int i = 0; i < prodMotor; i++) {
+                productorMotor();
+            }
+            for (int i = 0; i < prodRuedas; i++) {
+                productorRuedas();
+            }
+            for (int i = 0; i < ensamblador; i++) {
+                Ensamblador();
+            }
+            
+        }
+        System.out.println(ensamblador);
+        
+     
+        
     }
+    
+    public void crearContadorDias(){
+        Day day = new Day();
+        day.start();
+    }
+    
+    public void crearDirector(){
+        DirectorB dir = new DirectorB(Reloj, Vehiculo);
+        dir.start();
+    }
+    
+    public void crearGerente(){
+        GerenteB ger = new GerenteB(Reloj);
+        ger.start();
+    }
+    
 
     public void productorChasis() {
-        System.out.println(maxEmpleados);
         vecProdChasis[posVecChasis] = new ProductorChasisB(driveChasis, pChasis, mChasis, eChasis, maxEmpleados - 10);
         vecProdChasis[posVecChasis].start();
         posVecChasis++;
     }
+    
+    public void productorCarroc(){
+        vecProdCarroc[posVecCarroc] = new ProductorCarroceriaB(driveCarroceria, pCarroceria, mCarroceria, eCarroceria, maxEmpleados - 10);
+        vecProdCarroc[posVecCarroc].start();
+        posVecCarroc++;
+    }
+    
+    public void productorMotor(){
+        vecProdMotor[posVecMotor] = new ProductorMotorB(driveMotor, pMotor, mMotor, eMotor, maxEmpleados - 10);
+        vecProdMotor[posVecMotor].start();
+        posVecMotor++;
+    }
+    
+    public void productorRuedas(){
+        vecProdRuedas[posVecRuedas] = new ProductorRuedasB(driveRuedas, pRuedas, mRuedas, eRuedas, maxEmpleados - 10);
+        vecProdRuedas[posVecRuedas].start();
+        posVecRuedas++;
+    }
+    
+    public void productorAcce(){
+        vecProdAcc[posVecAcc] = new ProductorAccesoriosB(driveAcces, pAcces, mAcces, eAcces, maxEmpleados - 10);
+        vecProdAcc[posVecAcc].start();
+        posVecAcc++;
+    }
+    
+    public void Ensamblador(){
+        vecEnsamblador[posEnsamb] = new EnsambladorB(driveAcces, driveCarroceria, driveMotor, driveRuedas, driveChasis, pChasis, pCarroceria, pMotor, pRuedas, pAcces, mChasis, mCarroceria, mMotor, mRuedas, mAcces, eChasis, eCarroceria, eMotor, eRuedas, eAcces, Vehiculo);
+        vecEnsamblador[posEnsamb].start();
+        posEnsamb++;
+    }
+    
+    
 
 }

@@ -6,6 +6,7 @@
 package PlantaBugatti;
 
 import java.util.concurrent.Semaphore;
+
 /**
  *
  * @author mkferrerteran
@@ -29,28 +30,29 @@ public class ProductorMotorB extends Thread {
     public void run() {
         while (activo) {
             try {
-                productor.acquire();
                 
-               
-                if(0 <= num && num < 3){
-                    this.sleep(PlantaB.DiaDuracion * 2);
-                } else if(3 <= num && num < 6){
-                    this.sleep(PlantaB.DiaDuracion * 3);
-                } else{
-                    this.sleep(PlantaB.DiaDuracion * 4);
-                }
-                mutex.acquire();
-                drive.producirRuedas();
-                
-                PlantaB.Motor++;
-                System.out.println("Motor: " + PlantaB.Motor );
-                mutex.release();
-                ensamblador.release();
-                
+                    productor.acquire();
+
+                    if (0 <= num && num < 3) {
+                        this.sleep(PlantaB.DiaDuracion / 3);
+                    } else if (3 <= num && num < 6) {
+                        this.sleep(PlantaB.DiaDuracion / 2);
+
+                    } else {
+                        this.sleep(PlantaB.DiaDuracion);
+                    }
+                    mutex.acquire();
+                    drive.producirMotor();
+
+                    PlantaB.Motor++;
+//                    System.out.println("Motor: " + PlantaB.Motor);
+                    mutex.release();
+                    ensamblador.release();
+
+
             } catch (Exception e) {
             }
         }
     }
 
 }
-
