@@ -53,20 +53,52 @@ public class interfaz extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        empleadosChasis = new javax.swing.JSpinner();
-        cantidadChasis = new javax.swing.JTextField();
+        empleadosRuedasB = new javax.swing.JSpinner();
+        cantidadRuedasB = new javax.swing.JTextField();
         plantaRlabel = new javax.swing.JLabel();
         ensamblaRlabel = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         gananciasRlabel = new javax.swing.JLabel();
         GananciasR = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
+        BotonRuedasB = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         botonEmpEnsB = new javax.swing.JButton();
-        jSpinner1 = new javax.swing.JSpinner();
+        empleadosEnsB = new javax.swing.JSpinner();
         cantidadVehB = new javax.swing.JTextField();
         GananciasB = new javax.swing.JTextField();
+        empleadosChasisB = new javax.swing.JSpinner();
+        empleadosCarrB = new javax.swing.JSpinner();
+        empleadosMotorB = new javax.swing.JSpinner();
+        BotonChasisB = new javax.swing.JButton();
+        BotonCarrB = new javax.swing.JButton();
+        BotonMotorB = new javax.swing.JButton();
+        cantidadCarrB = new javax.swing.JTextField();
+        cantidadVehiculosR = new javax.swing.JTextField();
+        cantidadMotorB = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        cantidadChasisB = new javax.swing.JTextField();
+        cantidadChasisR = new javax.swing.JTextField();
+        cantidadCarrR = new javax.swing.JTextField();
+        cantidadMotorR1 = new javax.swing.JTextField();
+        cantidadRuedasR = new javax.swing.JTextField();
+        EnterEmpRuedasR = new javax.swing.JButton();
+        EmpleadosRuedasR = new javax.swing.JSpinner();
+        EmpleadosChasisR = new javax.swing.JSpinner();
+        EnterEmpChasisR = new javax.swing.JButton();
+        EmpleadosCarrR = new javax.swing.JSpinner();
+        EnterEmpCarrR = new javax.swing.JButton();
+        EmpleadosMotorR = new javax.swing.JSpinner();
+        EnterEmpMotorR = new javax.swing.JButton();
+        EnterEmpEnsR = new javax.swing.JButton();
+        EmpleadosEnsb = new javax.swing.JSpinner();
         Background = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
@@ -182,11 +214,11 @@ public class interfaz extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Ensambladores");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
-        add(empleadosChasis, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 70, -1));
+        add(empleadosRuedasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 70, -1));
 
-        cantidadChasis.setBackground(new java.awt.Color(0, 102, 153));
-        cantidadChasis.setForeground(new java.awt.Color(255, 255, 255));
-        add(cantidadChasis, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 80, -1));
+        cantidadRuedasB.setBackground(new java.awt.Color(0, 102, 153));
+        cantidadRuedasB.setForeground(new java.awt.Color(255, 255, 255));
+        add(cantidadRuedasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 80, -1));
 
         plantaRlabel.setForeground(new java.awt.Color(255, 255, 255));
         plantaRlabel.setText("Planta");
@@ -208,14 +240,14 @@ public class interfaz extends javax.swing.JPanel {
         GananciasR.setForeground(new java.awt.Color(255, 255, 255));
         add(GananciasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 420, 90, -1));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setForeground(new java.awt.Color(0, 102, 153));
-        jButton1.setText("Enter");
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 60, -1));
-
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Empleados");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, -1, -1));
+
+        BotonRuedasB.setBackground(new java.awt.Color(255, 255, 255));
+        BotonRuedasB.setForeground(new java.awt.Color(0, 102, 153));
+        BotonRuedasB.setText("Enter");
+        add(BotonRuedasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 60, -1));
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Cantidad de Vehiculos");
@@ -224,7 +256,7 @@ public class interfaz extends javax.swing.JPanel {
         botonEmpEnsB.setForeground(new java.awt.Color(0, 102, 153));
         botonEmpEnsB.setText("Enter");
         add(botonEmpEnsB, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 70, -1));
-        add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 70, -1));
+        add(empleadosEnsB, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 70, -1));
 
         cantidadVehB.setBackground(new java.awt.Color(0, 102, 153));
         cantidadVehB.setForeground(new java.awt.Color(255, 255, 255));
@@ -233,6 +265,113 @@ public class interfaz extends javax.swing.JPanel {
         GananciasB.setBackground(new java.awt.Color(0, 102, 153));
         GananciasB.setForeground(new java.awt.Color(255, 255, 255));
         add(GananciasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 420, 80, -1));
+        add(empleadosChasisB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 70, -1));
+        add(empleadosCarrB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 70, -1));
+        add(empleadosMotorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 70, -1));
+
+        BotonChasisB.setBackground(new java.awt.Color(255, 255, 255));
+        BotonChasisB.setForeground(new java.awt.Color(0, 102, 153));
+        BotonChasisB.setText("Enter");
+        add(BotonChasisB, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 60, -1));
+
+        BotonCarrB.setBackground(new java.awt.Color(255, 255, 255));
+        BotonCarrB.setForeground(new java.awt.Color(0, 102, 153));
+        BotonCarrB.setText("Enter");
+        add(BotonCarrB, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 60, -1));
+
+        BotonMotorB.setBackground(new java.awt.Color(255, 255, 255));
+        BotonMotorB.setForeground(new java.awt.Color(0, 102, 153));
+        BotonMotorB.setText("Enter");
+        add(BotonMotorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 60, -1));
+
+        cantidadCarrB.setBackground(new java.awt.Color(0, 102, 153));
+        cantidadCarrB.setForeground(new java.awt.Color(255, 255, 255));
+        add(cantidadCarrB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 80, -1));
+
+        cantidadVehiculosR.setBackground(new java.awt.Color(0, 102, 153));
+        cantidadVehiculosR.setForeground(new java.awt.Color(255, 255, 255));
+        add(cantidadVehiculosR, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 370, 80, -1));
+
+        cantidadMotorB.setBackground(new java.awt.Color(0, 102, 153));
+        cantidadMotorB.setForeground(new java.awt.Color(255, 255, 255));
+        add(cantidadMotorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 80, -1));
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Chasis");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, -1, -1));
+
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Carroceria");
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, -1, -1));
+
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Motor");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 260, -1, 10));
+
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Ruedas");
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 290, -1, -1));
+
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Empleados");
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, -1, -1));
+
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Cantidad de piezas");
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 170, -1, -1));
+
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Empleados");
+        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, -1, -1));
+
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Cantidad de Vehiculos");
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 340, -1, -1));
+
+        cantidadChasisB.setBackground(new java.awt.Color(0, 102, 153));
+        cantidadChasisB.setForeground(new java.awt.Color(255, 255, 255));
+        add(cantidadChasisB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 80, -1));
+
+        cantidadChasisR.setBackground(new java.awt.Color(0, 102, 153));
+        cantidadChasisR.setForeground(new java.awt.Color(255, 255, 255));
+        add(cantidadChasisR, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 80, -1));
+
+        cantidadCarrR.setBackground(new java.awt.Color(0, 102, 153));
+        cantidadCarrR.setForeground(new java.awt.Color(255, 255, 255));
+        add(cantidadCarrR, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 220, 80, -1));
+
+        cantidadMotorR1.setBackground(new java.awt.Color(0, 102, 153));
+        cantidadMotorR1.setForeground(new java.awt.Color(255, 255, 255));
+        add(cantidadMotorR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 250, 80, -1));
+
+        cantidadRuedasR.setBackground(new java.awt.Color(0, 102, 153));
+        cantidadRuedasR.setForeground(new java.awt.Color(255, 255, 255));
+        add(cantidadRuedasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 280, 80, -1));
+
+        EnterEmpRuedasR.setForeground(new java.awt.Color(0, 102, 153));
+        EnterEmpRuedasR.setText("Enter");
+        add(EnterEmpRuedasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 280, 60, -1));
+        add(EmpleadosRuedasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 280, 70, -1));
+        add(EmpleadosChasisR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 190, 70, -1));
+
+        EnterEmpChasisR.setForeground(new java.awt.Color(0, 102, 153));
+        EnterEmpChasisR.setText("Enter");
+        add(EnterEmpChasisR, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 60, -1));
+        add(EmpleadosCarrR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, 70, -1));
+
+        EnterEmpCarrR.setForeground(new java.awt.Color(0, 102, 153));
+        EnterEmpCarrR.setText("Enter");
+        add(EnterEmpCarrR, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, 60, -1));
+        add(EmpleadosMotorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 250, 70, -1));
+
+        EnterEmpMotorR.setForeground(new java.awt.Color(0, 102, 153));
+        EnterEmpMotorR.setText("Enter");
+        add(EnterEmpMotorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 250, 60, -1));
+
+        EnterEmpEnsR.setForeground(new java.awt.Color(0, 102, 153));
+        EnterEmpEnsR.setText("Enter");
+        add(EnterEmpEnsR, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, -1, -1));
+        add(EmpleadosEnsb, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 370, 80, -1));
 
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setForeground(new java.awt.Color(255, 255, 255));
@@ -247,11 +386,25 @@ public class interfaz extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
+    private javax.swing.JButton BotonCarrB;
+    private javax.swing.JButton BotonChasisB;
+    private javax.swing.JButton BotonMotorB;
+    private javax.swing.JButton BotonRuedasB;
     private javax.swing.JLabel DiasLabelB;
     private javax.swing.JTextField DiasRestantes;
     private javax.swing.JTextField DiasRestantesR;
     private javax.swing.JTextField DirectorB;
     private javax.swing.JTextField DirectorR;
+    private javax.swing.JSpinner EmpleadosCarrR;
+    private javax.swing.JSpinner EmpleadosChasisR;
+    private javax.swing.JSpinner EmpleadosEnsb;
+    private javax.swing.JSpinner EmpleadosMotorR;
+    private javax.swing.JSpinner EmpleadosRuedasR;
+    private javax.swing.JButton EnterEmpCarrR;
+    private javax.swing.JButton EnterEmpChasisR;
+    private javax.swing.JButton EnterEmpEnsR;
+    private javax.swing.JButton EnterEmpMotorR;
+    private javax.swing.JButton EnterEmpRuedasR;
     private javax.swing.JTextField FaltasGB;
     private javax.swing.JLabel FaltasGerR;
     private javax.swing.JTextField GananciasB;
@@ -260,22 +413,40 @@ public class interfaz extends javax.swing.JPanel {
     private javax.swing.JLabel LabelGerR1;
     private javax.swing.JTextField SalarioGB;
     private javax.swing.JButton botonEmpEnsB;
-    private javax.swing.JTextField cantidadChasis;
+    private javax.swing.JTextField cantidadCarrB;
+    private javax.swing.JTextField cantidadCarrR;
+    private javax.swing.JTextField cantidadChasisB;
+    private javax.swing.JTextField cantidadChasisR;
+    private javax.swing.JTextField cantidadMotorB;
+    private javax.swing.JTextField cantidadMotorR1;
+    private javax.swing.JTextField cantidadRuedasB;
+    private javax.swing.JTextField cantidadRuedasR;
     private javax.swing.JTextField cantidadVehB;
-    private javax.swing.JSpinner empleadosChasis;
+    private javax.swing.JTextField cantidadVehiculosR;
+    private javax.swing.JSpinner empleadosCarrB;
+    private javax.swing.JSpinner empleadosChasisB;
+    private javax.swing.JSpinner empleadosEnsB;
+    private javax.swing.JSpinner empleadosMotorB;
+    private javax.swing.JSpinner empleadosRuedasB;
     private javax.swing.JLabel ensamblaRlabel;
     private javax.swing.JTextField faltasGerR;
     private javax.swing.JTextField faltasGerR1;
     private javax.swing.JLabel gananciasRlabel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel labelCarroc;
     private javax.swing.JLabel labelCarroc1;
     private javax.swing.JLabel labelCarroc2;
