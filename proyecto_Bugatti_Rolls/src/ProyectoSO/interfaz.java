@@ -1,17 +1,17 @@
 package ProyectoSO;
 
+import PlantaBugatti.PlantaB;
+import PlantaRolls.PlantaR;
 import java.io.FileNotFoundException;
 import java.text.ParseException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JLabel;
+
 /**
  *
  * @author mkferrerteran
  */
-public class interfaz extends javax.swing.JFrame{
-
-    public interfaz() {
+public class interfaz extends javax.swing.JFrame {
+        
+    public interfaz() throws FileNotFoundException, InterruptedException, ParseException{ 
         initComponents();
     }
 
@@ -97,27 +97,26 @@ public class interfaz extends javax.swing.JFrame{
         jLabel17 = new javax.swing.JLabel();
         CostosRolls = new javax.swing.JTextField();
         Background = new javax.swing.JLabel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
 
         jLabel1.setText("jLabel1");
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         DiasLabelB.setForeground(new java.awt.Color(255, 255, 255));
         DiasLabelB.setText("Dias restantes ");
-        add(DiasLabelB, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
+        getContentPane().add(DiasLabelB, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
 
         DiasRestantes.setBackground(new java.awt.Color(0, 102, 153));
         DiasRestantes.setForeground(new java.awt.Color(255, 255, 255));
-        add(DiasRestantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 60, 30));
+        getContentPane().add(DiasRestantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 60, 30));
 
         labelGerenteB.setForeground(new java.awt.Color(255, 255, 255));
         labelGerenteB.setText("Gerente");
-        add(labelGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 60, 20));
+        getContentPane().add(labelGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 60, 20));
 
         LabelDirecB.setForeground(new java.awt.Color(255, 255, 255));
         LabelDirecB.setText("Director");
-        add(LabelDirecB, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, -1, -1));
+        getContentPane().add(LabelDirecB, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, -1, -1));
 
         SalarioGerenteB.setBackground(new java.awt.Color(0, 102, 153));
         SalarioGerenteB.setForeground(new java.awt.Color(255, 255, 255));
@@ -126,11 +125,11 @@ public class interfaz extends javax.swing.JFrame{
                 SalarioGerenteBActionPerformed(evt);
             }
         });
-        add(SalarioGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 60, -1));
+        getContentPane().add(SalarioGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 60, -1));
 
         DirectorB.setBackground(new java.awt.Color(0, 102, 153));
         DirectorB.setForeground(new java.awt.Color(255, 255, 255));
-        add(DirectorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 70, -1));
+        getContentPane().add(DirectorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 70, -1));
 
         FaltasGerenteB.setBackground(new java.awt.Color(0, 102, 153));
         FaltasGerenteB.setForeground(new java.awt.Color(255, 255, 255));
@@ -139,36 +138,36 @@ public class interfaz extends javax.swing.JFrame{
                 FaltasGerenteBActionPerformed(evt);
             }
         });
-        add(FaltasGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 60, -1));
+        getContentPane().add(FaltasGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 60, -1));
 
         labelFaltasGB.setForeground(new java.awt.Color(255, 255, 255));
         labelFaltasGB.setText("Faltas");
-        add(labelFaltasGB, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, -1, 20));
+        getContentPane().add(labelFaltasGB, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, -1, 20));
 
         labelSalarioG.setForeground(new java.awt.Color(255, 255, 255));
         labelSalarioG.setText("Salario");
-        add(labelSalarioG, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, -1, -1));
+        getContentPane().add(labelSalarioG, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, -1, -1));
 
         labelDiasR.setForeground(new java.awt.Color(255, 255, 255));
         labelDiasR.setText("Dias Restantes");
         labelDiasR.setToolTipText("");
-        add(labelDiasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, -1, -1));
+        getContentPane().add(labelDiasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, -1, -1));
 
         DiasRestantesR.setBackground(new java.awt.Color(0, 102, 153));
         DiasRestantesR.setForeground(new java.awt.Color(255, 255, 255));
-        add(DiasRestantesR, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, 70, -1));
+        getContentPane().add(DiasRestantesR, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, 70, -1));
 
         salarioGerR.setForeground(new java.awt.Color(255, 255, 255));
         salarioGerR.setText("Salario");
-        add(salarioGerR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 130, -1, 10));
+        getContentPane().add(salarioGerR, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, -1, 10));
 
         LabelGerR1.setForeground(new java.awt.Color(255, 255, 255));
         LabelGerR1.setText("Gerente");
-        add(LabelGerR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, -1, -1));
+        getContentPane().add(LabelGerR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 90, -1, -1));
 
         LabelFaltasGerR.setForeground(new java.awt.Color(255, 255, 255));
         LabelFaltasGerR.setText("Faltas");
-        add(LabelFaltasGerR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 100, -1, 10));
+        getContentPane().add(LabelFaltasGerR, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, -1, 10));
 
         SalarioGerenteR.setBackground(new java.awt.Color(0, 102, 153));
         SalarioGerenteR.setForeground(new java.awt.Color(255, 255, 255));
@@ -177,213 +176,213 @@ public class interfaz extends javax.swing.JFrame{
                 SalarioGerenteRActionPerformed(evt);
             }
         });
-        add(SalarioGerenteR, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 120, 60, -1));
+        getContentPane().add(SalarioGerenteR, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, 60, -1));
 
         FaltasGerenteR.setBackground(new java.awt.Color(0, 102, 153));
         FaltasGerenteR.setForeground(new java.awt.Color(255, 255, 255));
-        add(FaltasGerenteR, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 90, 60, -1));
+        getContentPane().add(FaltasGerenteR, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 110, 60, -1));
 
         labeldirecR.setForeground(new java.awt.Color(255, 255, 255));
         labeldirecR.setText("Director");
-        add(labeldirecR, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 70, -1, -1));
+        getContentPane().add(labeldirecR, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 90, -1, -1));
 
         DirectorR.setBackground(new java.awt.Color(0, 102, 153));
         DirectorR.setForeground(new java.awt.Color(255, 255, 255));
-        add(DirectorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 90, 70, -1));
+        getContentPane().add(DirectorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 110, 70, -1));
 
         labelPlanta.setForeground(new java.awt.Color(255, 255, 255));
         labelPlanta.setText("Planta");
-        add(labelPlanta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+        getContentPane().add(labelPlanta, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
 
         labelCarroc.setForeground(new java.awt.Color(255, 255, 255));
         labelCarroc.setText("Ruedas");
-        add(labelCarroc, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
+        getContentPane().add(labelCarroc, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
 
         labelChasis1.setForeground(new java.awt.Color(255, 255, 255));
         labelChasis1.setText("Chasis");
-        add(labelChasis1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
+        getContentPane().add(labelChasis1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
 
         labelCarroc1.setForeground(new java.awt.Color(255, 255, 255));
         labelCarroc1.setText("Carroceria");
-        add(labelCarroc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+        getContentPane().add(labelCarroc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
 
         labelCarroc2.setForeground(new java.awt.Color(255, 255, 255));
         labelCarroc2.setText("Motor");
-        add(labelCarroc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
+        getContentPane().add(labelCarroc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, -1));
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Empleados");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, -1, -1));
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Cantidad de piezas");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, -1, -1));
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Ensambladores");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
-        add(empleadosRuedasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 70, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, -1, -1));
+        getContentPane().add(empleadosRuedasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 70, -1));
 
         cantidadRuedasB.setBackground(new java.awt.Color(0, 102, 153));
         cantidadRuedasB.setForeground(new java.awt.Color(255, 255, 255));
-        add(cantidadRuedasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 80, -1));
+        getContentPane().add(cantidadRuedasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 300, 80, -1));
 
         plantaRlabel.setForeground(new java.awt.Color(255, 255, 255));
         plantaRlabel.setText("Planta");
-        add(plantaRlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, -1, -1));
+        getContentPane().add(plantaRlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, -1, -1));
 
         ensamblaRlabel.setForeground(new java.awt.Color(255, 255, 255));
         ensamblaRlabel.setText("Ensambladores");
-        add(ensamblaRlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, -1, -1));
+        getContentPane().add(ensamblaRlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 350, -1, -1));
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ganancias");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, 10));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, -1, 10));
 
         gananciasRlabel.setForeground(new java.awt.Color(255, 255, 255));
         gananciasRlabel.setText("Ganancias");
-        add(gananciasRlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, -1, 10));
+        getContentPane().add(gananciasRlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, -1, 10));
 
         GananciasRolls.setBackground(new java.awt.Color(0, 102, 153));
         GananciasRolls.setForeground(new java.awt.Color(255, 255, 255));
-        add(GananciasRolls, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 420, 90, -1));
+        getContentPane().add(GananciasRolls, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 440, 90, -1));
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Empleados");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, -1, -1));
 
         BotonRuedasB.setBackground(new java.awt.Color(255, 255, 255));
         BotonRuedasB.setForeground(new java.awt.Color(0, 102, 153));
         BotonRuedasB.setText("Enter");
-        add(BotonRuedasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 60, -1));
+        getContentPane().add(BotonRuedasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, 60, -1));
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Cantidad de Vehiculos");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, -1, -1));
 
         botonEmpEnsB.setForeground(new java.awt.Color(0, 102, 153));
         botonEmpEnsB.setText("Enter");
-        add(botonEmpEnsB, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 80, -1));
-        add(empleadosEnsB, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 70, -1));
+        getContentPane().add(botonEmpEnsB, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 80, -1));
+        getContentPane().add(empleadosEnsB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 70, -1));
 
         cantidadVehB.setBackground(new java.awt.Color(0, 102, 153));
         cantidadVehB.setForeground(new java.awt.Color(255, 255, 255));
-        add(cantidadVehB, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 370, 90, -1));
-        add(empleadosChasisB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 70, -1));
-        add(empleadosCarrB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 70, -1));
-        add(empleadosMotorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 70, -1));
+        getContentPane().add(cantidadVehB, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, 90, -1));
+        getContentPane().add(empleadosChasisB, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 70, -1));
+        getContentPane().add(empleadosCarrB, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 70, -1));
+        getContentPane().add(empleadosMotorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 70, -1));
 
         BotonChasisB.setBackground(new java.awt.Color(255, 255, 255));
         BotonChasisB.setForeground(new java.awt.Color(0, 102, 153));
         BotonChasisB.setText("Enter");
-        add(BotonChasisB, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 60, -1));
+        getContentPane().add(BotonChasisB, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 60, -1));
 
         BotonCarrB.setBackground(new java.awt.Color(255, 255, 255));
         BotonCarrB.setForeground(new java.awt.Color(0, 102, 153));
         BotonCarrB.setText("Enter");
-        add(BotonCarrB, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 60, -1));
+        getContentPane().add(BotonCarrB, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 60, -1));
 
         BotonMotorB.setBackground(new java.awt.Color(255, 255, 255));
         BotonMotorB.setForeground(new java.awt.Color(0, 102, 153));
         BotonMotorB.setText("Enter");
-        add(BotonMotorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 60, -1));
+        getContentPane().add(BotonMotorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 60, -1));
 
         cantidadCarrB.setBackground(new java.awt.Color(0, 102, 153));
         cantidadCarrB.setForeground(new java.awt.Color(255, 255, 255));
-        add(cantidadCarrB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 80, -1));
+        getContentPane().add(cantidadCarrB, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 80, -1));
 
         cantidadVehiculosR.setBackground(new java.awt.Color(0, 102, 153));
         cantidadVehiculosR.setForeground(new java.awt.Color(255, 255, 255));
-        add(cantidadVehiculosR, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 370, 80, -1));
+        getContentPane().add(cantidadVehiculosR, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 390, 80, -1));
 
         cantidadMotorB.setBackground(new java.awt.Color(0, 102, 153));
         cantidadMotorB.setForeground(new java.awt.Color(255, 255, 255));
-        add(cantidadMotorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 80, -1));
+        getContentPane().add(cantidadMotorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 80, -1));
 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Chasis");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, -1, -1));
 
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Carroceria");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, -1, -1));
 
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Motor");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 260, -1, 10));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, -1, 10));
 
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Ruedas");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 290, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, -1, -1));
 
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Empleados");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, -1, -1));
 
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Cantidad de piezas");
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 170, -1, -1));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 190, -1, -1));
 
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Empleados");
-        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, -1, -1));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 360, -1, -1));
 
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Cantidad de Vehiculos");
-        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 340, -1, -1));
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 360, -1, -1));
 
         cantidadChasisB.setBackground(new java.awt.Color(0, 102, 153));
         cantidadChasisB.setForeground(new java.awt.Color(255, 255, 255));
-        add(cantidadChasisB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 80, -1));
+        getContentPane().add(cantidadChasisB, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, 80, -1));
 
         cantidadChasisR.setBackground(new java.awt.Color(0, 102, 153));
         cantidadChasisR.setForeground(new java.awt.Color(255, 255, 255));
-        add(cantidadChasisR, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 80, -1));
+        getContentPane().add(cantidadChasisR, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 210, 80, -1));
 
         cantidadCarrR.setBackground(new java.awt.Color(0, 102, 153));
         cantidadCarrR.setForeground(new java.awt.Color(255, 255, 255));
-        add(cantidadCarrR, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 220, 80, -1));
+        getContentPane().add(cantidadCarrR, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 240, 80, -1));
 
         cantidadMotorR1.setBackground(new java.awt.Color(0, 102, 153));
         cantidadMotorR1.setForeground(new java.awt.Color(255, 255, 255));
-        add(cantidadMotorR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 250, 80, -1));
+        getContentPane().add(cantidadMotorR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 270, 80, -1));
 
         cantidadRuedasR.setBackground(new java.awt.Color(0, 102, 153));
         cantidadRuedasR.setForeground(new java.awt.Color(255, 255, 255));
-        add(cantidadRuedasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 280, 80, -1));
+        getContentPane().add(cantidadRuedasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 300, 80, -1));
 
         EnterEmpRuedasR.setForeground(new java.awt.Color(0, 102, 153));
         EnterEmpRuedasR.setText("Enter");
-        add(EnterEmpRuedasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 280, 60, -1));
-        add(EmpleadosRuedasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 280, 70, -1));
-        add(EmpleadosChasisR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 190, 70, -1));
+        getContentPane().add(EnterEmpRuedasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 300, 60, -1));
+        getContentPane().add(EmpleadosRuedasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, 70, -1));
+        getContentPane().add(EmpleadosChasisR, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 210, 70, -1));
 
         EnterEmpChasisR.setForeground(new java.awt.Color(0, 102, 153));
         EnterEmpChasisR.setText("Enter");
-        add(EnterEmpChasisR, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 60, -1));
-        add(EmpleadosCarrR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, 70, -1));
+        getContentPane().add(EnterEmpChasisR, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 60, -1));
+        getContentPane().add(EmpleadosCarrR, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 240, 70, -1));
 
         EnterEmpCarrR.setForeground(new java.awt.Color(0, 102, 153));
         EnterEmpCarrR.setText("Enter");
-        add(EnterEmpCarrR, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, 60, -1));
-        add(EmpleadosMotorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 250, 70, -1));
+        getContentPane().add(EnterEmpCarrR, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 240, 60, -1));
+        getContentPane().add(EmpleadosMotorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 270, 70, -1));
 
         EnterEmpMotorR.setForeground(new java.awt.Color(0, 102, 153));
         EnterEmpMotorR.setText("Enter");
-        add(EnterEmpMotorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 250, 60, -1));
+        getContentPane().add(EnterEmpMotorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 270, 60, -1));
 
         EnterEmpEnsR.setForeground(new java.awt.Color(0, 102, 153));
         EnterEmpEnsR.setText("Enter");
-        add(EnterEmpEnsR, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, -1, -1));
-        add(EmpleadosEnsb, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 370, 80, -1));
+        getContentPane().add(EnterEmpEnsR, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, -1, -1));
+        getContentPane().add(EmpleadosEnsb, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 390, 80, -1));
 
         GananciasBugatti.setBackground(new java.awt.Color(0, 102, 153));
         GananciasBugatti.setForeground(new java.awt.Color(255, 255, 255));
-        add(GananciasBugatti, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 90, -1));
+        getContentPane().add(GananciasBugatti, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, 90, -1));
 
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Costos");
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 426, -1, 20));
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, -1, 20));
 
         CostosBugatti.setBackground(new java.awt.Color(0, 102, 153));
         CostosBugatti.setForeground(new java.awt.Color(255, 255, 255));
@@ -392,20 +391,19 @@ public class interfaz extends javax.swing.JFrame{
                 CostosBugattiActionPerformed(evt);
             }
         });
-        add(CostosBugatti, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 420, 90, -1));
+        getContentPane().add(CostosBugatti, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 90, -1));
 
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Costos");
-        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 430, -1, 10));
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 450, -1, 10));
 
         CostosRolls.setBackground(new java.awt.Color(0, 102, 153));
         CostosRolls.setForeground(new java.awt.Color(255, 255, 255));
-        add(CostosRolls, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 420, 90, -1));
+        getContentPane().add(CostosRolls, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 440, 90, -1));
 
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/Sirve2.png"))); // NOI18N
-        add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 8, -1, 470));
-        add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, -9, 140, 20));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, 470));
     }// </editor-fold>//GEN-END:initComponents
 
     private void SalarioGerenteRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalarioGerenteRActionPerformed
@@ -492,7 +490,6 @@ public class interfaz extends javax.swing.JFrame{
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel labelCarroc;
     private javax.swing.JLabel labelCarroc1;
     private javax.swing.JLabel labelCarroc2;
