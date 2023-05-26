@@ -25,7 +25,7 @@ public class Day extends Thread {
         while(activo){
             try {
                 Thread.sleep(PlantaB.DiaDuracion);
-                System.out.println("\n Dia: " + (day-1));
+                System.out.println(day-1);
                 day--;
 //                director.mes--
             } catch (Exception e) {

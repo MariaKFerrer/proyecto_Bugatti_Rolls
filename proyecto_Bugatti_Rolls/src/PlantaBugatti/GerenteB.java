@@ -12,7 +12,7 @@ import java.util.concurrent.Semaphore;
  */
 public class GerenteB extends Thread{
     
-    Semaphore Reloj = new Semaphore(1);
+        Semaphore Reloj = new Semaphore(1);
         public static int diasAntesEntrega;
         public static String G;
         private static boolean activo = true;
@@ -40,5 +40,7 @@ public class GerenteB extends Thread{
             }
         }
         
-        
+        public static void F1(){
+            activo = false;
+        } 
 }
