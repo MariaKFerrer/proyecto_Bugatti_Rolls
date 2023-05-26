@@ -15,6 +15,7 @@ public class DirectorR extends Thread {
 
     Semaphore reloj = new Semaphore(1);
     Semaphore vehiculo = new Semaphore(1);
+    Semaphore VehiculoAcc;
     
     public static int diasParaEntrega;
     public static String DIR;
@@ -22,9 +23,10 @@ public class DirectorR extends Thread {
     public static int Mes = 30;
     private static boolean activo = true;
     
-    public DirectorR (Semaphore Reloj, Semaphore Capitulo){
+    public DirectorR (Semaphore Reloj, Semaphore Capitulo, Semaphore VehiculoAcc){
             this.reloj = Reloj;
             DIR = "";
+            this.VehiculoAcc = VehiculoAcc;
         }
     
     @Override
@@ -43,15 +45,29 @@ public class DirectorR extends Thread {
                 } while (Day.day != diasParaEntrega);
                 
                 reloj.acquire();
-                    DIR = "DESPACHANDO";
-                    Thread.sleep(PlantaR.DiaDuracion);
-                    Day.day = PlantaR.DiasParaEntrega;
-                    DIR = "DESPACHANDO";
-                    Thread.sleep(PlantaR.DiaDuracion);
-                    vehiculo.acquire();
-                        System.out.println("ganancias");
-                    vehiculo.release();
+                DIR = "DESPACHANDO";
+                Thread.sleep(PlantaR.DiaDuracion);
+                Day.day = PlantaR.DiasParaEntrega;
+                DIR = "DESPACHADO";
+                Thread.sleep(PlantaR.DiaDuracion);
+                vehiculo.acquire();
+                System.out.println(PlantaR.ganancias);
+                System.out.println("Vehiculos normales: " + (450000 * PlantaR.vehiculo));
+                PlantaR.ganancias = PlantaR.ganancias + (450000 * PlantaR.vehiculo);
+                System.out.println(PlantaR.ganancias);
+                vehiculo.release();
+
+                VehiculoAcc.acquire();
+                System.out.println("Vehiculos normales: " + (900000 * PlantaR.vehiculoAcc));
+                PlantaR.ganancias = PlantaR.ganancias + (900000 * PlantaR.vehiculoAcc);
+                System.out.println(PlantaR.ganancias);
+                VehiculoAcc.release();
+
                 reloj.release();
+                System.out.println("Ingresos brutos: " + PlantaR.ganancias);
+                PlantaR.ganancias = PlantaR.ganancias + PlantaR.gastos;
+                System.out.println("Gastos: " + Math.abs(PlantaR.gastos));
+                System.out.println("Ganancias: " + PlantaR.ganancias);
                 
                 
             } catch (Exception e) {

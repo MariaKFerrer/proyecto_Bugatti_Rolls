@@ -16,7 +16,7 @@ public class CobrosR extends Thread {
     public int contador;
 
     public CobrosR() {
-        this.diaDuracion = PlantaB.DiaDuracion;
+        this.diaDuracion = PlantaR.DiaDuracion;
     }
 
     @Override

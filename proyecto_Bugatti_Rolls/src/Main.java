@@ -23,11 +23,11 @@ public class Main {
 //        PlantaB plantab = new PlantaB(5);
 //        plantab.Start();
 
-         PlantaB plantaR = new PlantaB(5);
-         plantaR.Start();
+//         PlantaB plantaB = new PlantaB(5);
+//         plantaB.Start();
         
-//        PlantaR plantar = new PlantaR(9);
-//        plantar.Start();
+        PlantaR plantar = new PlantaR(5);
+        plantar.Start();
 
 
     }

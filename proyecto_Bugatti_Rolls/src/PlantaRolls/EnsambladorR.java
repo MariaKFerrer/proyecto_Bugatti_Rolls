@@ -85,9 +85,8 @@ public class EnsambladorR extends Thread {
     public void run() {
         while (activo) {
             try {
-
                 if ((PlantaR.Chasis >= 3) && (PlantaR.Carroceria >= 2) && (PlantaR.Motor >= 4) && (PlantaR.Ruedas >= 6)) {
-//                    System.out.println("Dentro");
+                    System.out.println("Ensamblando");
 //                    System.out.println("\n Chasis: " + PlantaR.Chasis);
 //                    System.out.println("\n Carroceria: " + PlantaR.Carroceria);
 //                    System.out.println("\n Motor: " + PlantaR.Motor);
@@ -217,7 +216,11 @@ public class EnsambladorR extends Thread {
                     System.out.println("Vehiculos: " + PlantaR.vehiculo);
                     System.out.println("Vehiculos con accesorios: " + PlantaR.vehiculoAcc);
                 } else {
-                 
+//                    System.out.println("\n Chasis: " + PlantaR.Chasis);
+//                    System.out.println("\n Carroceria: " + PlantaR.Carroceria);
+//                    System.out.println("\n Motor: " + PlantaR.Motor);
+//                    System.out.println("\n Ruedas: " + PlantaR.Ruedas);
+                    Thread.sleep(PlantaR.DiaDuracion);
 
                 }
 

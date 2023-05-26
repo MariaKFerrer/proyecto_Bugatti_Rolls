@@ -37,7 +37,7 @@ public class PlantaB {
     public static int vehiculo; // numero de vehiculos normales
     public static int vehiculoAcc; // numero de vehiculos con accesorios
     public static int contadorVehiculos; // contador de vehiculos ensamblados
-    
+
     public static int prodChasis;
     public static int prodCarroceria;
     public static int prodMotor;
@@ -128,6 +128,8 @@ public class PlantaB {
         }
 
         motorDrive = parseInt(line.substring(17, 25).trim());
+        System.out.println(motorDrive);
+
         line = doc.nextLine(); //Almacenamiento de motor en el Drive
         if (motorDrive < 1) {
             motorDrive = 55;
@@ -139,6 +141,7 @@ public class PlantaB {
             ruedasDrive = 35;
         }
         accesDrive = parseInt(line.substring(17, 25).trim());
+
         line = doc.nextLine(); //Almacenamiento de accesorios en el Drive
         if (accesDrive < 1) {
             accesDrive = 10;
