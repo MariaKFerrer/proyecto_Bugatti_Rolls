@@ -33,6 +33,8 @@ public class EnsambladorB extends Thread {
     Semaphore eAcces;
 
     Semaphore vehiculo;
+    Semaphore vehiculoAcc;
+    Semaphore contadorVehiculos;
 
     public Drive driveAcces;
     public Drive driveCarroc;
@@ -46,7 +48,7 @@ public class EnsambladorB extends Thread {
             Semaphore eCarroceria,
             Semaphore eMotor,
             Semaphore eRuedas,
-            Semaphore eAcces, Semaphore vehiculo) {
+            Semaphore eAcces, Semaphore vehiculo, Semaphore vehiculoAcc, Semaphore contadorVehiculos) {
 
         this.driveAcces = driveAcces;
         this.driveCarroc = driveCarroc;
@@ -73,6 +75,8 @@ public class EnsambladorB extends Thread {
         this.eRuedas = eRuedas;
 
         this.vehiculo = vehiculo;
+        this.vehiculoAcc = vehiculoAcc;
+        this.contadorVehiculos = contadorVehiculos;
 
     }
 
@@ -82,12 +86,12 @@ public class EnsambladorB extends Thread {
             try {
 
                 if ((PlantaB.Chasis >= 1) && (PlantaB.Carroceria >= 2) && (PlantaB.Motor >= 4) && (PlantaB.Ruedas >= 4)) {
-                    System.out.println("Dentro");
-                    System.out.println("\n Chasis: " + PlantaB.Chasis);
-                    System.out.println("\n Carroceria: " + PlantaB.Carroceria);
-                    System.out.println("\n Motor: " + PlantaB.Motor);
-                    System.out.println("\n Ruedas: " + PlantaB.Ruedas);
-                    if ((PlantaB.vehiculo % 5 != 0) || (PlantaB.vehiculo == 0)) {
+//                    System.out.println("Dentro");
+//                    System.out.println("\n Chasis: " + PlantaB.Chasis);
+//                    System.out.println("\n Carroceria: " + PlantaB.Carroceria);
+//                    System.out.println("\n Motor: " + PlantaB.Motor);
+//                    System.out.println("\n Ruedas: " + PlantaB.Ruedas);
+                    if ((PlantaB.contadorVehiculos % 5 != 0) || (PlantaB.contadorVehiculos == 0)) {
 
                         Thread.sleep(PlantaB.DiaDuracion * 2);
 
@@ -130,6 +134,12 @@ public class EnsambladorB extends Thread {
 //                        System.out.println( PlantaB.Ruedas);
                         this.mRuedas.release();
 //                        this.pRuedas.release();
+
+                        vehiculo.acquire();
+                        PlantaB.vehiculo++;
+                        vehiculo.release();
+                        System.out.println("Vehiculo ensamblado");
+                        
                     } else {
                         System.out.println("Vehiculo con accesorios");
 
@@ -182,12 +192,21 @@ public class EnsambladorB extends Thread {
                         this.mAcces.release();
 //                        this.pAcces.release();
 
+                        vehiculoAcc.acquire();
+                        PlantaB.vehiculoAcc++;
+                        vehiculoAcc.release();
+                        System.out.println("Vehiculo con accesorios ensamblado");
+                        
+
                     }
-                    vehiculo.acquire();
-                    PlantaB.vehiculo++;
-                    vehiculo.release();
-                    System.out.println("Vehiculo ensamblado");
+                    
+                    contadorVehiculos.acquire();
+                    PlantaB.contadorVehiculos++;
+                    contadorVehiculos.release();
+                    
+                    System.out.println("Vehiculos con accesorios: " + PlantaB.vehiculoAcc);
                     System.out.println("Vehiculos: " + PlantaB.vehiculo);
+
                 }
 
             } catch (Exception e) {

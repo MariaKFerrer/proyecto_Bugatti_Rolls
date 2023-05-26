@@ -22,11 +22,14 @@ public class Main {
      */
     public static void main(String[] args) throws ParseException, InterruptedException, FileNotFoundException {
         // TODO code application logic here
-        PlantaB plantab = new PlantaB(5);
-        plantab.Start();
+//        PlantaB plantab = new PlantaB(5);
+//        plantab.Start();
+
+//         PlantaB plantaB = new PlantaB(5);
+//         plantaB.Start();
         
-//        PlantaR plantar = new PlantaR(9);
-//        plantar.Start();
+        PlantaR plantar = new PlantaR(5);
+        plantar.Start();
 
 
     }
