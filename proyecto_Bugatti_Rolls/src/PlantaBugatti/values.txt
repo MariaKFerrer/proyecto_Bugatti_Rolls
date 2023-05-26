@@ -5,9 +5,9 @@ carroceriaDrive: 0
 motorDrive:      0           
 ruedasDrive:     0           
 accesDrive:      0           
-prodChasis:      3         
-prodCarroceria:  4          
-prodMotor:       0         
-prodRuedas:      0           
-prodAcces:       0           
-ensamblador:     2        
+prodChasis:      2        
+prodCarroceria:  2          
+prodMotor:       2         
+prodRuedas:      2           
+prodAcces:       2           
+ensamblador:     1        
