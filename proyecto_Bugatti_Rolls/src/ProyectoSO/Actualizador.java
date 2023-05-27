@@ -40,11 +40,17 @@ public class Actualizador extends Thread {
             interfaz.cantidadCarrB.setText(String.valueOf(plantaB.Carroceria));
             interfaz.cantidadMotorB.setText(String.valueOf(plantaB.Motor));
             interfaz.cantidadRuedasB.setText(String.valueOf(plantaB.Ruedas));
-//            interfaz.canti.setText(String.valueOf(plantaB.Carroceria));
-            interfaz.cantidadVehB.setText(String.valueOf(plantaB.vehiculo));
+            interfaz.empChasis.setText(String.valueOf(plantaB.prodChasis));
+            interfaz.empCarroc.setText(String.valueOf(plantaB.prodCarroceria));
+            interfaz.empMotor.setText(String.valueOf(plantaB.prodMotor));
+            interfaz.empRuedas.setText(String.valueOf(plantaB.prodRuedas));
+            interfaz.empEnsamb.setText(String.valueOf(plantaB.ensamblador));
+            interfaz.empAccesorios.setText(String.valueOf(plantaB.prodAcces));
             interfaz.CostosBugatti.setText(String.valueOf(Math.abs(plantaB.gastos)));
             interfaz.GananciasBugatti.setText(String.valueOf(plantaB.ganancias));
             interfaz.DiasRestantes.setText(String.valueOf(Day.day));
+
+            interfaz.empDisp.setText(String.valueOf(plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas + plantaB.prodAcces + plantaB.ensamblador)));
 
             interfaz.cantidadChasisR.setText(String.valueOf(plantaR.Chasis));
             interfaz.cantidadCarrR.setText(String.valueOf(plantaR.Chasis));
