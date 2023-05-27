@@ -153,11 +153,12 @@ public class Interfaz extends javax.swing.JFrame {
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        setPreferredSize(new java.awt.Dimension(850, 478));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Costos");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 450, -1, 10));
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 490, -1, 10));
 
         DiasLabelB.setForeground(new java.awt.Color(255, 255, 255));
         DiasLabelB.setText("Dias restantes ");
@@ -293,11 +294,11 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ganancias");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, -1, 10));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, -1, 10));
 
         gananciasRlabel.setForeground(new java.awt.Color(255, 255, 255));
         gananciasRlabel.setText("Ganancias");
-        getContentPane().add(gananciasRlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, -1, 10));
+        getContentPane().add(gananciasRlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 490, -1, 10));
 
         GananciasRolls.setBackground(new java.awt.Color(0, 102, 153));
         GananciasRolls.setForeground(new java.awt.Color(255, 255, 255));
@@ -741,6 +742,8 @@ public class Interfaz extends javax.swing.JFrame {
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/Sirve2.png"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 470));
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void SalarioGerenteRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalarioGerenteRActionPerformed
