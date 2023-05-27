@@ -28,8 +28,10 @@ public class Main {
 //         PlantaB plantaB = new PlantaB(5);
 //         plantaB.Start();
         
-        PlantaR plantar = new PlantaR(5);
-        plantar.Start();
+//        PlantaR plantar = new PlantaR(5);
+//        plantar.Start();
+
+          Interfaz inter = new Interfaz();
 
 
     }

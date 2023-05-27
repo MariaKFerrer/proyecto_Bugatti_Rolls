@@ -229,5 +229,9 @@ public class EnsambladorR extends Thread {
             }
         }
     }
+    
+     public void despEnsamb(){
+        activo = false;
+    }
 
 }

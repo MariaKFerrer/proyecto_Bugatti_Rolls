@@ -9,13 +9,13 @@ package PlantaRolls;
  *
  * @author mkferrerteran
  */
-public class Day extends Thread{
+public class DayR extends Thread{
     
     public static int day;
     public int counter;
     public static boolean activo = true;
     
-    public Day(){
+    public DayR(){
         this.day = PlantaR.DiasParaEntrega;
         this.counter = 0;
         

@@ -52,5 +52,9 @@ public class ProductorChasisB extends Thread {
             }
         }
     }
+    
+    public void despChasis(){
+        activo = false;
+    }
 
 }
