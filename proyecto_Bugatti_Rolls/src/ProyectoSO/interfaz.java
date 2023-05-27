@@ -22,10 +22,11 @@ public class Interfaz extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
 //        this.setResizable(false);
         this.setVisible(true);
-        this.act = new Actualizador(this, plantaB);
+        
         
         this.plantaB = new PlantaB(5);
         this.plantaR = new PlantaR(9);
+        this.act = new Actualizador(this, plantaB);
         
         
         this.act.run();
@@ -75,7 +76,7 @@ public class Interfaz extends javax.swing.JFrame {
         gananciasRlabel = new javax.swing.JLabel();
         GananciasRolls = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        cantidadVehB = new javax.swing.JTextField();
+        empChasis = new javax.swing.JTextField();
         cantidadCarrB = new javax.swing.JTextField();
         cantidadVehiculosR = new javax.swing.JTextField();
         cantidadMotorB = new javax.swing.JTextField();
@@ -98,22 +99,27 @@ public class Interfaz extends javax.swing.JFrame {
         CostosRolls = new javax.swing.JTextField();
         cantidadChasisB1 = new javax.swing.JTextField();
         cantidadChasisB2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        mRuedas = new javax.swing.JButton();
+        aRuedas = new javax.swing.JButton();
+        mChasis = new javax.swing.JButton();
+        aChasis = new javax.swing.JButton();
+        aAcces = new javax.swing.JButton();
+        aMotor = new javax.swing.JButton();
+        mAcces = new javax.swing.JButton();
+        mMotor = new javax.swing.JButton();
+        aEnsamb = new javax.swing.JButton();
+        mEnsamb = new javax.swing.JButton();
         labelCarroc3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        cantidadVehB1 = new javax.swing.JTextField();
+        empMotor = new javax.swing.JTextField();
+        empRuedas = new javax.swing.JTextField();
+        empAccesorios = new javax.swing.JTextField();
+        empEnsamb = new javax.swing.JTextField();
+        empDisp = new javax.swing.JTextField();
+        aCarroc = new javax.swing.JButton();
+        empCarroc = new javax.swing.JTextField();
+        mCarroc = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
@@ -219,7 +225,7 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(labelPlanta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
 
         labelCarroc.setForeground(new java.awt.Color(255, 255, 255));
-        labelCarroc.setText("Ruedas");
+        labelCarroc.setText("Accesorios");
         getContentPane().add(labelCarroc, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
 
         labelChasis1.setForeground(new java.awt.Color(255, 255, 255));
@@ -236,15 +242,15 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Empleados");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, -1, -1));
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Cantidad de piezas");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, -1, -1));
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Ensambladores");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, -1));
+        jLabel4.setText("Disponibles");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
 
         cantidadRuedasB.setBackground(new java.awt.Color(0, 102, 153));
         cantidadRuedasB.setForeground(new java.awt.Color(255, 255, 255));
@@ -260,7 +266,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ganancias");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, 10));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, -1, 10));
 
         gananciasRlabel.setForeground(new java.awt.Color(255, 255, 255));
         gananciasRlabel.setText("Ganancias");
@@ -274,9 +280,9 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel7.setText("Cantidad de Vehiculos");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, -1));
 
-        cantidadVehB.setBackground(new java.awt.Color(0, 102, 153));
-        cantidadVehB.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(cantidadVehB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 90, -1));
+        empChasis.setBackground(new java.awt.Color(0, 102, 153));
+        empChasis.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(empChasis, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 60, -1));
 
         cantidadCarrB.setBackground(new java.awt.Color(0, 102, 153));
         cantidadCarrB.setForeground(new java.awt.Color(255, 255, 255));
@@ -340,11 +346,11 @@ public class Interfaz extends javax.swing.JFrame {
 
         GananciasBugatti.setBackground(new java.awt.Color(0, 102, 153));
         GananciasBugatti.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(GananciasBugatti, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 90, -1));
+        getContentPane().add(GananciasBugatti, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 90, -1));
 
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Costos");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, -1, 20));
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 440, -1, 20));
 
         CostosBugatti.setBackground(new java.awt.Color(0, 102, 153));
         CostosBugatti.setForeground(new java.awt.Color(255, 255, 255));
@@ -353,7 +359,7 @@ public class Interfaz extends javax.swing.JFrame {
                 CostosBugattiActionPerformed(evt);
             }
         });
-        getContentPane().add(CostosBugatti, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, 90, -1));
+        getContentPane().add(CostosBugatti, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 440, 90, -1));
 
         Start.setText("Start");
         Start.addActionListener(new java.awt.event.ActionListener() {
@@ -375,74 +381,137 @@ public class Interfaz extends javax.swing.JFrame {
         cantidadChasisB2.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(cantidadChasisB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 80, -1));
 
-        jButton1.setText("-");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, -1, -1));
-
-        jButton3.setText("+");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, -1, -1));
-
-        jButton2.setText("-");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
-
-        jButton4.setText("+");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, -1, -1));
-
-        jButton5.setText("+");
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, -1, -1));
-
-        jButton6.setText("+");
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, -1, -1));
-
-        jButton7.setText("-");
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, -1, -1));
-
-        jButton8.setText("-");
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, -1, -1));
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        mRuedas.setText("-");
+        mRuedas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                mRuedasActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 40, 30));
+        getContentPane().add(mRuedas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, -1, -1));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        aRuedas.setText("+");
+        aRuedas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                aRuedasActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 40, 30));
+        getContentPane().add(aRuedas, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        mChasis.setText("-");
+        mChasis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                mChasisActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 40, 30));
+        getContentPane().add(mChasis, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, -1, -1));
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        aChasis.setText("+");
+        aChasis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                aChasisActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, 40, 30));
+        getContentPane().add(aChasis, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, -1, -1));
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        aAcces.setText("+");
+        aAcces.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                aAccesActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 40, 30));
+        getContentPane().add(aAcces, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, -1, -1));
 
-        jButton9.setText("+");
-        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, -1, -1));
+        aMotor.setText("+");
+        aMotor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aMotorActionPerformed(evt);
+            }
+        });
+        getContentPane().add(aMotor, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, -1, -1));
 
-        jButton10.setText("-");
-        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, -1, -1));
+        mAcces.setText("-");
+        mAcces.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mAccesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(mAcces, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, -1, -1));
+
+        mMotor.setText("-");
+        mMotor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mMotorActionPerformed(evt);
+            }
+        });
+        getContentPane().add(mMotor, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
+
+        aEnsamb.setText("+");
+        aEnsamb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aEnsambActionPerformed(evt);
+            }
+        });
+        getContentPane().add(aEnsamb, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, -1, -1));
+
+        mEnsamb.setText("-");
+        mEnsamb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mEnsambActionPerformed(evt);
+            }
+        });
+        getContentPane().add(mEnsamb, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, -1, -1));
 
         labelCarroc3.setForeground(new java.awt.Color(255, 255, 255));
         labelCarroc3.setText("Ruedas");
         getContentPane().add(labelCarroc3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Ensambladores");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, -1));
+
+        cantidadVehB1.setBackground(new java.awt.Color(0, 102, 153));
+        cantidadVehB1.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(cantidadVehB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 90, -1));
+
+        empMotor.setBackground(new java.awt.Color(0, 102, 153));
+        empMotor.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(empMotor, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 60, -1));
+
+        empRuedas.setBackground(new java.awt.Color(0, 102, 153));
+        empRuedas.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(empRuedas, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 60, -1));
+
+        empAccesorios.setBackground(new java.awt.Color(0, 102, 153));
+        empAccesorios.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(empAccesorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 60, -1));
+
+        empEnsamb.setBackground(new java.awt.Color(0, 102, 153));
+        empEnsamb.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(empEnsamb, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, 60, -1));
+
+        empDisp.setBackground(new java.awt.Color(0, 102, 153));
+        empDisp.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(empDisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 410, 60, -1));
+
+        aCarroc.setText("+");
+        aCarroc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aCarrocActionPerformed(evt);
+            }
+        });
+        getContentPane().add(aCarroc, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, -1, -1));
+
+        empCarroc.setBackground(new java.awt.Color(0, 102, 153));
+        empCarroc.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(empCarroc, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 60, -1));
+
+        mCarroc.setText("-");
+        mCarroc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mCarrocActionPerformed(evt);
+            }
+        });
+        getContentPane().add(mCarroc, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, -1, -1));
 
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/Sirve2.png"))); // NOI18N
@@ -488,25 +557,104 @@ public class Interfaz extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_StartActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void aChasisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aChasisActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+        
+        if(plantaB.posVecChasis < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas +plantaB.prodAcces + plantaB.ensamblador ) !=0)){
+            plantaB.productorChasis();
+            plantaB.prodChasis++;
+        }
+    }//GEN-LAST:event_aChasisActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void mChasisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mChasisActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+        if(plantaB.posVecChasis != 0 && (plantaB.prodChasis - 1) >0){
+            plantaB.despProdChasis();
+             plantaB.prodChasis--;
+        }
+    }//GEN-LAST:event_mChasisActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void mCarrocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mCarrocActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+        if(plantaB.posVecCarroc != 0 && (plantaB.prodCarroceria - 1) >0){
+            plantaB.desProdCarroc();
+             plantaB.prodCarroceria--;
+        }
+    }//GEN-LAST:event_mCarrocActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void aCarrocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aCarrocActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+        if(plantaB.posVecCarroc < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas +plantaB.prodAcces + plantaB.ensamblador ) !=0)){
+            plantaB.productorCarroc();
+            plantaB.prodCarroceria++;
+        }
+    }//GEN-LAST:event_aCarrocActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void mMotorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mMotorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+        if(plantaB.posVecMotor != 0 && (plantaB.prodMotor - 1) >0){
+            plantaB.desProdMotor();
+             plantaB.prodMotor--;
+        }
+    }//GEN-LAST:event_mMotorActionPerformed
+
+    private void aMotorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aMotorActionPerformed
+        // TODO add your handling code here:
+        if(plantaB.posVecMotor < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas +plantaB.prodAcces + plantaB.ensamblador ) !=0)){
+            plantaB.productorMotor();
+            plantaB.prodMotor++;
+        }
+    }//GEN-LAST:event_aMotorActionPerformed
+
+    private void mRuedasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mRuedasActionPerformed
+        // TODO add your handling code here:
+        if(plantaB.posVecRuedas != 0 && (plantaB.prodRuedas - 1) >0){
+            plantaB.desProdRuedas();
+             plantaB.prodRuedas--;
+        }
+    }//GEN-LAST:event_mRuedasActionPerformed
+
+    private void aRuedasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aRuedasActionPerformed
+        // TODO add your handling code here:
+        if(plantaB.posVecRuedas < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas +plantaB.prodAcces + plantaB.ensamblador ) !=0)){
+            plantaB.productorRuedas();
+            plantaB.prodRuedas++;
+        }
+        
+    }//GEN-LAST:event_aRuedasActionPerformed
+
+    private void mAccesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mAccesActionPerformed
+        // TODO add your handling code here:
+        if(plantaB.posVecAcc != 0 && (plantaB.prodAcces - 1) >0){
+            plantaB.desProdAcc();
+             plantaB.prodAcces--;
+        }
+    }//GEN-LAST:event_mAccesActionPerformed
+
+    private void aAccesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aAccesActionPerformed
+        // TODO add your handling code here:
+        
+        if(plantaB.posVecAcc < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas +plantaB.prodAcces + plantaB.ensamblador ) !=0)){
+            plantaB.productorAcce();
+            plantaB.prodAcces++;
+        }
+    }//GEN-LAST:event_aAccesActionPerformed
+
+    private void mEnsambActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mEnsambActionPerformed
+        // TODO add your handling code here:
+        if(plantaB.posEnsamb != 0 && (plantaB.ensamblador - 1) >0){
+            plantaB.desEnsamblador();
+             plantaB.ensamblador--;
+        }
+    }//GEN-LAST:event_mEnsambActionPerformed
+
+    private void aEnsambActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aEnsambActionPerformed
+        // TODO add your handling code here:
+        if(plantaB.posEnsamb < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas +plantaB.prodAcces + plantaB.ensamblador ) !=0)){
+            plantaB.Ensamblador();
+            plantaB.ensamblador++;
+        }
+    }//GEN-LAST:event_aEnsambActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -528,6 +676,12 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JTextField SalarioGerenteB;
     private javax.swing.JTextField SalarioGerenteR;
     private javax.swing.JButton Start;
+    private javax.swing.JButton aAcces;
+    private javax.swing.JButton aCarroc;
+    private javax.swing.JButton aChasis;
+    private javax.swing.JButton aEnsamb;
+    private javax.swing.JButton aMotor;
+    private javax.swing.JButton aRuedas;
     public javax.swing.JTextField cantidadCarrB;
     public javax.swing.JTextField cantidadCarrR;
     public javax.swing.JTextField cantidadChasisB;
@@ -538,20 +692,17 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JTextField cantidadMotorR1;
     public javax.swing.JTextField cantidadRuedasB;
     public javax.swing.JTextField cantidadRuedasR;
-    public javax.swing.JTextField cantidadVehB;
+    public javax.swing.JTextField cantidadVehB1;
     public javax.swing.JTextField cantidadVehiculosR;
+    public javax.swing.JTextField empAccesorios;
+    public javax.swing.JTextField empCarroc;
+    public javax.swing.JTextField empChasis;
+    public javax.swing.JTextField empDisp;
+    public javax.swing.JTextField empEnsamb;
+    public javax.swing.JTextField empMotor;
+    public javax.swing.JTextField empRuedas;
     private javax.swing.JLabel ensamblaRlabel;
     private javax.swing.JLabel gananciasRlabel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -564,6 +715,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -571,11 +723,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JLabel labelCarroc;
     private javax.swing.JLabel labelCarroc1;
     private javax.swing.JLabel labelCarroc2;
@@ -587,6 +734,12 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel labelPlanta;
     private javax.swing.JLabel labelSalarioG;
     private javax.swing.JLabel labeldirecR;
+    private javax.swing.JButton mAcces;
+    private javax.swing.JButton mCarroc;
+    private javax.swing.JButton mChasis;
+    private javax.swing.JButton mEnsamb;
+    private javax.swing.JButton mMotor;
+    private javax.swing.JButton mRuedas;
     private javax.swing.JLabel plantaRlabel;
     private javax.swing.JLabel salarioGerR;
     // End of variables declaration//GEN-END:variables
