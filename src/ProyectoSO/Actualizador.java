@@ -71,5 +71,9 @@ public class Actualizador extends Thread {
 
         }
     }
+    
+    public static void stopAct(){
+        activo = false;
+    }
 
 }

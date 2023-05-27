@@ -14,6 +14,7 @@ public class CobrosR extends Thread {
 
     public static int diaDuracion;
     public int contador;
+    public static boolean activo = true;
 
     public CobrosR() {
         this.diaDuracion = PlantaR.DiaDuracion;
@@ -35,6 +36,10 @@ public class CobrosR extends Thread {
             } catch (Exception e) {
             }
         }
+    }
+    
+    public static void stopCobros(){
+        activo = false;
     }
 
 }

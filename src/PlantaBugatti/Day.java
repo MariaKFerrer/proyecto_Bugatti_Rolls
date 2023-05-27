@@ -34,4 +34,7 @@ public class Day extends Thread {
         }
     }
     
+    public static void stopDay(){
+        activo = false;
+    }
 }

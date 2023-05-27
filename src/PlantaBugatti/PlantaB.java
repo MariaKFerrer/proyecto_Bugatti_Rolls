@@ -4,6 +4,7 @@
  */
 package PlantaBugatti;
 
+import ProyectoSO.Actualizador;
 import java.io.File;
 import java.io.FileNotFoundException;
 import static java.lang.Integer.parseInt;
@@ -287,44 +288,89 @@ public class PlantaB {
         vecEnsamblador[posEnsamb].start();
         posEnsamb++;
     }
-    
-    public void despProdChasis(){
+
+    public void despProdChasis() {
         posVecChasis--;
         vecProdChasis[posVecChasis].despChasis();
     }
-    
-    public void desProdCarroc(){
+
+    public void desProdCarroc() {
         posVecCarroc--;
         vecProdCarroc[posVecChasis].despCarr();
     }
-    
-    public void desProdMotor(){
+
+    public void desProdMotor() {
         posVecMotor--;
         vecProdMotor[posVecMotor].despMotor();
     }
-    
-    public void desProdRuedas(){
+
+    public void desProdRuedas() {
         posVecRuedas--;
         vecProdRuedas[posVecRuedas].despRuedas();
     }
-    
-    public void desProdAcc(){
+
+    public void desProdAcc() {
         posVecAcc--;
         vecProdAcc[posVecAcc].despAcc();
     }
-    
-    public void desEnsamblador(){
+
+    public void desEnsamblador() {
         posEnsamb--;
         vecEnsamblador[posEnsamb].despEnsamb();
     }
-    
-    
 
     public void cobros() {
         CobrosB cobros = new CobrosB();
         cobros.start();
     }
 
-   
+    public static void stopAll() {
+
+        for (int i = ensamblador; i > 0; i--) {  //1
+            ensamblador--;
+            posEnsamb--;
+            vecEnsamblador[posEnsamb].despEnsamb();
+
+        }
+
+        for (int i = prodAcces; i > 0; i--) {  //1
+            prodAcces--;
+            posVecAcc--;
+            vecProdAcc[posVecAcc].despAcc();
+
+        }
+
+        for (int i = prodCarroceria; i > 0; i--) {  //1
+            prodCarroceria--;
+            posVecCarroc--;
+            vecProdCarroc[posVecCarroc].despCarr();
+
+        }
+
+        for (int i = prodChasis; i > 0; i--) {  //1
+            prodChasis--;
+            posVecChasis--;
+            vecProdChasis[posVecChasis].despChasis();
+
+        }
+
+        for (int i = prodMotor; i > 0; i--) {  //1
+            prodMotor--;
+            posVecMotor--;
+            vecProdMotor[posVecMotor].despMotor();
+
+        }
+
+        for (int i = prodRuedas; i > 0; i--) {  //1
+            prodRuedas--;
+            posVecRuedas--;
+            vecProdRuedas[posVecRuedas].despRuedas();
+
+        }
+
+        Day.stopDay();
+        CobrosB.stopCobros();
+        Actualizador.stopAct();
+    }
 
 }

@@ -12,6 +12,7 @@ public class CobrosB extends Thread {
 
     public static int diaDuracion;
     public int contador;
+    public static boolean activo = true;
 
     public CobrosB() {
         this.diaDuracion = PlantaB.DiaDuracion;
@@ -20,7 +21,7 @@ public class CobrosB extends Thread {
     @Override
     public void run() {
 
-        while (true) {
+        while (activo) {
             try {
                 Thread.sleep(diaDuracion / 24);
                 PlantaB.gastos = PlantaB.gastos - (10 * PlantaB.posVecChasis);
@@ -33,6 +34,10 @@ public class CobrosB extends Thread {
             } catch (Exception e) {
             }
         }
+    }
+
+    public static void stopCobros(){
+        activo = false;
     }
 
 }

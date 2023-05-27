@@ -7,6 +7,7 @@ package PlantaRolls;
 
 import PlantaRolls.ProductorCarroceriaR;
 import PlantaRolls.ProductorChasisR;
+import ProyectoSO.Actualizador;
 import java.io.File;
 import java.io.FileNotFoundException;
 import static java.lang.Integer.parseInt;
@@ -333,6 +334,55 @@ public class PlantaR {
     public void cobros() {
         CobrosR cobros = new CobrosR();
         cobros.start();
+    }
+    
+    public static void stopAll() {
+
+        for (int i = ensamblador; i > 0; i--) {  //1
+            ensamblador--;
+            posEnsamb--;
+            vecEnsamblador[posEnsamb].despEnsamb();
+
+        }
+
+        for (int i = prodAcces; i > 0; i--) {  //1
+            prodAcces--;
+            posVecAcc--;
+            vecProdAcc[posVecAcc].despAcc();
+
+        }
+
+        for (int i = prodCarroceria; i > 0; i--) {  //1
+            prodCarroceria--;
+            posVecCarroc--;
+            vecProdCarroc[posVecCarroc].despCarr();
+
+        }
+
+        for (int i = prodChasis; i > 0; i--) {  //1
+            prodChasis--;
+            posVecChasis--;
+            vecProdChasis[posVecChasis].despChasis();
+
+        }
+
+        for (int i = prodMotor; i > 0; i--) {  //1
+            prodMotor--;
+            posVecMotor--;
+            vecProdMotor[posVecMotor].despMotor();
+
+        }
+
+        for (int i = prodRuedas; i > 0; i--) {  //1
+            prodRuedas--;
+            posVecRuedas--;
+            vecProdRuedas[posVecRuedas].despRuedas();
+
+        }
+
+        DayR.stopDay();
+        CobrosR.stopCobros();
+        Actualizador.stopAct();
     }
 
 }

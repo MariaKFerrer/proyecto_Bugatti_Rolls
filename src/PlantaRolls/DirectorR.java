@@ -47,8 +47,10 @@ public class DirectorR extends Thread {
                 reloj.acquire();
                 DIR = "DESPACHANDO";
                 Thread.sleep(PlantaR.DiaDuracion);
-                DayR.day = PlantaR.DiasParaEntrega;
+                DayR.day = 0;
                 DIR = "DESPACHADO";
+                CobrosR.stopCobros();
+                DayR.stopDay();
                 Thread.sleep(PlantaR.DiaDuracion);
                 vehiculo.acquire();
                 System.out.println(PlantaR.ganancias);

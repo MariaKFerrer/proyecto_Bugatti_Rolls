@@ -35,4 +35,8 @@ public class DayR extends Thread{
         }
     }
     
+    public static void stopDay(){
+        activo = false;
+    }
+    
 }
