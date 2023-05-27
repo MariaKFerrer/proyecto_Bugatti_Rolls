@@ -112,14 +112,18 @@ public class Interfaz extends javax.swing.JFrame {
         labelCarroc3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         cantidadVehB1 = new javax.swing.JTextField();
+        vehiculosAccB = new javax.swing.JTextField();
         empMotor = new javax.swing.JTextField();
         empRuedas = new javax.swing.JTextField();
-        empAccesorios = new javax.swing.JTextField();
+        cantAccesB = new javax.swing.JTextField();
         empEnsamb = new javax.swing.JTextField();
         empDisp = new javax.swing.JTextField();
         aCarroc = new javax.swing.JButton();
         empCarroc = new javax.swing.JTextField();
         mCarroc = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        vehiculosB = new javax.swing.JTextField();
+        empAccesorios = new javax.swing.JTextField();
         Background = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
@@ -254,7 +258,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         cantidadRuedasB.setBackground(new java.awt.Color(0, 102, 153));
         cantidadRuedasB.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(cantidadRuedasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 80, -1));
+        getContentPane().add(cantidadRuedasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 80, -1));
 
         plantaRlabel.setForeground(new java.awt.Color(255, 255, 255));
         plantaRlabel.setText("Planta");
@@ -277,8 +281,7 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(GananciasRolls, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 420, 90, -1));
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Cantidad de Vehiculos");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, -1, -1));
 
         empChasis.setBackground(new java.awt.Color(0, 102, 153));
         empChasis.setForeground(new java.awt.Color(255, 255, 255));
@@ -469,9 +472,9 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel6.setText("Ensambladores");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, -1));
 
-        cantidadVehB1.setBackground(new java.awt.Color(0, 102, 153));
-        cantidadVehB1.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(cantidadVehB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 90, -1));
+        vehiculosAccB.setBackground(new java.awt.Color(0, 102, 153));
+        vehiculosAccB.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(vehiculosAccB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 90, -1));
 
         empMotor.setBackground(new java.awt.Color(0, 102, 153));
         empMotor.setForeground(new java.awt.Color(255, 255, 255));
@@ -481,9 +484,9 @@ public class Interfaz extends javax.swing.JFrame {
         empRuedas.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(empRuedas, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 60, -1));
 
-        empAccesorios.setBackground(new java.awt.Color(0, 102, 153));
-        empAccesorios.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(empAccesorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 60, -1));
+        cantAccesB.setBackground(new java.awt.Color(0, 102, 153));
+        cantAccesB.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(cantAccesB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 80, -1));
 
         empEnsamb.setBackground(new java.awt.Color(0, 102, 153));
         empEnsamb.setForeground(new java.awt.Color(255, 255, 255));
@@ -512,6 +515,18 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(mCarroc, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, -1, -1));
+
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Vehiculos estandar");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, -1, -1));
+
+        vehiculosB.setBackground(new java.awt.Color(0, 102, 153));
+        vehiculosB.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(vehiculosB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 90, -1));
+
+        empAccesorios.setBackground(new java.awt.Color(0, 102, 153));
+        empAccesorios.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(empAccesorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 60, -1));
 
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/Sirve2.png"))); // NOI18N
@@ -682,6 +697,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton aEnsamb;
     private javax.swing.JButton aMotor;
     private javax.swing.JButton aRuedas;
+    public javax.swing.JTextField cantAccesB;
     public javax.swing.JTextField cantidadCarrB;
     public javax.swing.JTextField cantidadCarrR;
     public javax.swing.JTextField cantidadChasisB;
@@ -692,7 +708,6 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JTextField cantidadMotorR1;
     public javax.swing.JTextField cantidadRuedasB;
     public javax.swing.JTextField cantidadRuedasR;
-    public javax.swing.JTextField cantidadVehB1;
     public javax.swing.JTextField cantidadVehiculosR;
     public javax.swing.JTextField empAccesorios;
     public javax.swing.JTextField empCarroc;
@@ -708,6 +723,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -742,5 +758,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton mRuedas;
     private javax.swing.JLabel plantaRlabel;
     private javax.swing.JLabel salarioGerR;
+    public javax.swing.JTextField vehiculosAccB;
+    public javax.swing.JTextField vehiculosB;
     // End of variables declaration//GEN-END:variables
 }
