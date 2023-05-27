@@ -28,10 +28,15 @@ public class Main {
 //         PlantaB plantaB = new PlantaB(5);
 //         plantaB.Start();
         
+<<<<<<< Updated upstream
 //        PlantaR plantar = new PlantaR(5);
 //        plantar.Start();
 
           Interfaz inter = new Interfaz();
+=======
+        PlantaR plantaR = new PlantaR(5);
+        plantaR.Start();
+>>>>>>> Stashed changes
 
 
     }
