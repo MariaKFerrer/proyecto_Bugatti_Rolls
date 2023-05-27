@@ -111,7 +111,6 @@ public class Interfaz extends javax.swing.JFrame {
         mEnsamb = new javax.swing.JButton();
         labelCarroc3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        cantidadVehB1 = new javax.swing.JTextField();
         vehiculosAccB = new javax.swing.JTextField();
         empMotor = new javax.swing.JTextField();
         empRuedas = new javax.swing.JTextField();
@@ -281,6 +280,7 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(GananciasRolls, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 420, 90, -1));
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Vehiculos Accesorios");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, -1, -1));
 
         empChasis.setBackground(new java.awt.Color(0, 102, 153));
