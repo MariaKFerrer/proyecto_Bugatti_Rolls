@@ -22,13 +22,11 @@ public class Interfaz extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
 //        this.setResizable(false);
         this.setVisible(true);
-        
-        
+
         this.plantaB = new PlantaB(5);
         this.plantaR = new PlantaR(9);
-        this.act = new Actualizador(this, plantaB);
-        
-        
+        this.act = new Actualizador(this, plantaB, plantaR);
+
         this.act.run();
 
     }
@@ -114,7 +112,7 @@ public class Interfaz extends javax.swing.JFrame {
         empRuedasB = new javax.swing.JTextField();
         cantAccesR = new javax.swing.JTextField();
         empEnsamb = new javax.swing.JTextField();
-        empDisp = new javax.swing.JTextField();
+        empDispR = new javax.swing.JTextField();
         aCarrocB = new javax.swing.JButton();
         empCarrocB = new javax.swing.JTextField();
         mCarrocB = new javax.swing.JButton();
@@ -143,12 +141,12 @@ public class Interfaz extends javax.swing.JFrame {
         aRuedasR1 = new javax.swing.JButton();
         empRuedasR = new javax.swing.JTextField();
         mRuedasR = new javax.swing.JButton();
-        empMotorR1 = new javax.swing.JTextField();
-        empMotorR2 = new javax.swing.JTextField();
-        mMotorR1 = new javax.swing.JButton();
-        aMotorR1 = new javax.swing.JButton();
-        mMotorR2 = new javax.swing.JButton();
-        aMotorR2 = new javax.swing.JButton();
+        empMotorR = new javax.swing.JTextField();
+        empCarrocR = new javax.swing.JTextField();
+        mMotorR = new javax.swing.JButton();
+        aMotorR = new javax.swing.JButton();
+        mCarrocR = new javax.swing.JButton();
+        aCarrocR = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
@@ -530,9 +528,9 @@ public class Interfaz extends javax.swing.JFrame {
         empEnsamb.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(empEnsamb, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, 60, -1));
 
-        empDisp.setBackground(new java.awt.Color(0, 102, 153));
-        empDisp.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(empDisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, 90, 20));
+        empDispR.setBackground(new java.awt.Color(0, 102, 153));
+        empDispR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(empDispR, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, 90, 20));
 
         aCarrocB.setForeground(new java.awt.Color(0, 102, 153));
         aCarrocB.setText("+");
@@ -696,49 +694,49 @@ public class Interfaz extends javax.swing.JFrame {
         });
         getContentPane().add(mRuedasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 50, -1));
 
-        empMotorR1.setBackground(new java.awt.Color(0, 102, 153));
-        empMotorR1.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(empMotorR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 60, -1));
+        empMotorR.setBackground(new java.awt.Color(0, 102, 153));
+        empMotorR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(empMotorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 60, -1));
 
-        empMotorR2.setBackground(new java.awt.Color(0, 102, 153));
-        empMotorR2.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(empMotorR2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, 60, -1));
+        empCarrocR.setBackground(new java.awt.Color(0, 102, 153));
+        empCarrocR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(empCarrocR, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, 60, -1));
 
-        mMotorR1.setForeground(new java.awt.Color(0, 102, 153));
-        mMotorR1.setText("-");
-        mMotorR1.addActionListener(new java.awt.event.ActionListener() {
+        mMotorR.setForeground(new java.awt.Color(0, 102, 153));
+        mMotorR.setText("-");
+        mMotorR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mMotorR1ActionPerformed(evt);
+                mMotorRActionPerformed(evt);
             }
         });
-        getContentPane().add(mMotorR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, 50, -1));
+        getContentPane().add(mMotorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, 50, -1));
 
-        aMotorR1.setForeground(new java.awt.Color(0, 102, 153));
-        aMotorR1.setText("+");
-        aMotorR1.addActionListener(new java.awt.event.ActionListener() {
+        aMotorR.setForeground(new java.awt.Color(0, 102, 153));
+        aMotorR.setText("+");
+        aMotorR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aMotorR1ActionPerformed(evt);
+                aMotorRActionPerformed(evt);
             }
         });
-        getContentPane().add(aMotorR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 240, 50, 30));
+        getContentPane().add(aMotorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 240, 50, 30));
 
-        mMotorR2.setForeground(new java.awt.Color(0, 102, 153));
-        mMotorR2.setText("-");
-        mMotorR2.addActionListener(new java.awt.event.ActionListener() {
+        mCarrocR.setForeground(new java.awt.Color(0, 102, 153));
+        mCarrocR.setText("-");
+        mCarrocR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mMotorR2ActionPerformed(evt);
+                mCarrocRActionPerformed(evt);
             }
         });
-        getContentPane().add(mMotorR2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, 50, -1));
+        getContentPane().add(mCarrocR, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, 50, -1));
 
-        aMotorR2.setForeground(new java.awt.Color(0, 102, 153));
-        aMotorR2.setText("+");
-        aMotorR2.addActionListener(new java.awt.event.ActionListener() {
+        aCarrocR.setForeground(new java.awt.Color(0, 102, 153));
+        aCarrocR.setText("+");
+        aCarrocR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aMotorR2ActionPerformed(evt);
+                aCarrocRActionPerformed(evt);
             }
         });
-        getContentPane().add(aMotorR2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 50, 30));
+        getContentPane().add(aCarrocR, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 50, 30));
 
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/Sirve2.png"))); // NOI18N
@@ -786,8 +784,8 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void aChasisBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aChasisBActionPerformed
         // TODO add your handling code here:
-        
-        if(plantaB.posVecChasis < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas +plantaB.prodAcces + plantaB.ensamblador ) !=0)){
+
+        if (plantaB.posVecChasis < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas + plantaB.prodAcces + plantaB.ensamblador) != 0)) {
             plantaB.productorChasis();
             plantaB.prodChasis++;
         }
@@ -795,23 +793,23 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void mChasisBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mChasisBActionPerformed
         // TODO add your handling code here:
-        if(plantaB.posVecChasis != 0 && (plantaB.prodChasis - 1) >0){
+        if (plantaB.posVecChasis != 0 && (plantaB.prodChasis - 1) > 0) {
             plantaB.despProdChasis();
-             plantaB.prodChasis--;
+            plantaB.prodChasis--;
         }
     }//GEN-LAST:event_mChasisBActionPerformed
 
     private void mCarrocBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mCarrocBActionPerformed
         // TODO add your handling code here:
-        if(plantaB.posVecCarroc != 0 && (plantaB.prodCarroceria - 1) >0){
+        if (plantaB.posVecCarroc != 0 && (plantaB.prodCarroceria - 1) > 0) {
             plantaB.desProdCarroc();
-             plantaB.prodCarroceria--;
+            plantaB.prodCarroceria--;
         }
     }//GEN-LAST:event_mCarrocBActionPerformed
 
     private void aCarrocBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aCarrocBActionPerformed
         // TODO add your handling code here:
-        if(plantaB.posVecCarroc < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas +plantaB.prodAcces + plantaB.ensamblador ) !=0)){
+        if (plantaB.posVecCarroc < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas + plantaB.prodAcces + plantaB.ensamblador) != 0)) {
             plantaB.productorCarroc();
             plantaB.prodCarroceria++;
         }
@@ -819,15 +817,15 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void mMotorBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mMotorBActionPerformed
         // TODO add your handling code here:
-        if(plantaB.posVecMotor != 0 && (plantaB.prodMotor - 1) >0){
+        if (plantaB.posVecMotor != 0 && (plantaB.prodMotor - 1) > 0) {
             plantaB.desProdMotor();
-             plantaB.prodMotor--;
+            plantaB.prodMotor--;
         }
     }//GEN-LAST:event_mMotorBActionPerformed
 
     private void aMotorBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aMotorBActionPerformed
         // TODO add your handling code here:
-        if(plantaB.posVecMotor < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas +plantaB.prodAcces + plantaB.ensamblador ) !=0)){
+        if (plantaB.posVecMotor < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas + plantaB.prodAcces + plantaB.ensamblador) != 0)) {
             plantaB.productorMotor();
             plantaB.prodMotor++;
         }
@@ -835,52 +833,54 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void mRuedasBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mRuedasBActionPerformed
         // TODO add your handling code here:
-        if(plantaB.posVecRuedas != 0 && (plantaB.prodRuedas - 1) >0){
+        if (plantaB.posVecRuedas != 0 && (plantaB.prodRuedas - 1) > 0) {
             plantaB.desProdRuedas();
-             plantaB.prodRuedas--;
+            plantaB.prodRuedas--;
         }
     }//GEN-LAST:event_mRuedasBActionPerformed
 
     private void aRuedasBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aRuedasBActionPerformed
         // TODO add your handling code here:
-        if(plantaB.posVecRuedas < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas +plantaB.prodAcces + plantaB.ensamblador ) !=0)){
+        if (plantaB.posVecRuedas < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas + plantaB.prodAcces + plantaB.ensamblador) != 0)) {
             plantaB.productorRuedas();
             plantaB.prodRuedas++;
         }
-        
+
     }//GEN-LAST:event_aRuedasBActionPerformed
 
     private void mChasisRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mChasisRActionPerformed
         // TODO add your handling code here:
-        if(plantaB.posVecAcc != 0 && (plantaB.prodAcces - 1) >0){
-            plantaB.desProdAcc();
-             plantaB.prodAcces--;
+        if (plantaR.posVecChasis != 0 && (plantaR.prodChasis - 1) > 0) {
+            plantaR.despProdChasis();
+            plantaR.prodChasis--;
         }
     }//GEN-LAST:event_mChasisRActionPerformed
 
     private void aChasisRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aChasisRActionPerformed
         // TODO add your handling code here:
-        
-        if(plantaB.posVecAcc < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas +plantaB.prodAcces + plantaB.ensamblador ) !=0)){
-            plantaB.productorAcce();
-            plantaB.prodAcces++;
+
+        if (plantaR.posVecChasis < plantaR.maxEmpleados && (plantaR.maxEmpleados - (plantaR.prodChasis + plantaR.prodCarroceria + plantaR.prodMotor + plantaR.prodRuedas + plantaR.prodAcces + plantaR.ensamblador) != 0)) {
+            plantaR.productorChasis();
+            plantaR.prodChasis++;
         }
     }//GEN-LAST:event_aChasisRActionPerformed
 
     private void mEnsambActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mEnsambActionPerformed
         // TODO add your handling code here:
-        if(plantaB.posEnsamb != 0 && (plantaB.ensamblador - 1) >0){
-            plantaB.desEnsamblador();
-             plantaB.ensamblador--;
+        if (plantaR.posEnsamb != 0 && (plantaR.ensamblador - 1) > 0) {
+            plantaR.desEnsamblador();
+            plantaR.ensamblador--;
         }
+
     }//GEN-LAST:event_mEnsambActionPerformed
 
     private void aEnsambActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aEnsambActionPerformed
         // TODO add your handling code here:
-        if(plantaB.posEnsamb < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas +plantaB.prodAcces + plantaB.ensamblador ) !=0)){
-            plantaB.Ensamblador();
-            plantaB.ensamblador++;
+        if (plantaR.posEnsamb < plantaR.maxEmpleados && (plantaR.maxEmpleados - (plantaR.prodChasis + plantaR.prodCarroceria + plantaR.prodMotor + plantaR.prodRuedas + plantaR.prodAcces + plantaR.ensamblador) != 0)) {
+            plantaR.Ensamblador();
+            plantaR.ensamblador++;
         }
+
     }//GEN-LAST:event_aEnsambActionPerformed
 
     private void cantidadChasisBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cantidadChasisBActionPerformed
@@ -889,10 +889,19 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void aEnsamb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aEnsamb1ActionPerformed
         // TODO add your handling code here:
+        if (plantaB.posEnsamb < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas + plantaB.prodAcces + plantaB.ensamblador) != 0)) {
+            plantaB.Ensamblador();
+            plantaB.ensamblador++;
+        }
+
     }//GEN-LAST:event_aEnsamb1ActionPerformed
 
     private void mEnsambBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mEnsambBActionPerformed
         // TODO add your handling code here:
+        if (plantaB.posEnsamb != 0 && (plantaB.ensamblador - 1) > 0) {
+            plantaB.desEnsamblador();
+            plantaB.ensamblador--;
+        }
     }//GEN-LAST:event_mEnsambBActionPerformed
 
     private void cantAccesRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cantAccesRActionPerformed
@@ -901,43 +910,83 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void aAccesBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aAccesBActionPerformed
         // TODO add your handling code here:
+        if (plantaB.posVecAcc < plantaB.maxEmpleados && (plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas + plantaB.prodAcces + plantaB.ensamblador) != 0)) {
+            plantaB.productorAcce();
+            plantaB.prodAcces++;
+        }
     }//GEN-LAST:event_aAccesBActionPerformed
 
     private void mAccesBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mAccesBActionPerformed
         // TODO add your handling code here:
+        if (plantaB.posVecAcc != 0 && (plantaB.prodAcces - 1) > 0) {
+            plantaB.desProdAcc();
+            plantaB.prodAcces--;
+        }
     }//GEN-LAST:event_mAccesBActionPerformed
 
     private void aAccesR1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aAccesR1ActionPerformed
         // TODO add your handling code here:
+        if (plantaR.posVecAcc < plantaR.maxEmpleados && (plantaR.maxEmpleados - (plantaR.prodChasis + plantaR.prodCarroceria + plantaR.prodMotor + plantaR.prodRuedas + plantaR.prodAcces + plantaR.ensamblador) != 0)) {
+            plantaR.productorAcce();
+            plantaR.prodAcces++;
+        }
     }//GEN-LAST:event_aAccesR1ActionPerformed
 
     private void mAccesR1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mAccesR1ActionPerformed
         // TODO add your handling code here:
+        if (plantaR.posVecAcc != 0 && (plantaR.prodAcces - 1) > 0) {
+            plantaR.desProdAcc();
+            plantaR.prodAcces--;
+        }
     }//GEN-LAST:event_mAccesR1ActionPerformed
 
     private void aRuedasR1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aRuedasR1ActionPerformed
         // TODO add your handling code here:
+        if (plantaR.posVecRuedas < plantaR.maxEmpleados && (plantaR.maxEmpleados - (plantaR.prodChasis + plantaR.prodCarroceria + plantaR.prodMotor + plantaR.prodRuedas + plantaR.prodAcces + plantaR.ensamblador) != 0)) {
+            plantaR.productorRuedas();
+            plantaR.prodRuedas++;
+        }
     }//GEN-LAST:event_aRuedasR1ActionPerformed
 
     private void mRuedasRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mRuedasRActionPerformed
         // TODO add your handling code here:
+        if (plantaR.posVecRuedas != 0 && (plantaR.prodRuedas - 1) > 0) {
+            plantaR.desProdRuedas();
+            plantaR.prodRuedas--;
+        }
     }//GEN-LAST:event_mRuedasRActionPerformed
 
-    private void mMotorR1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mMotorR1ActionPerformed
+    private void mMotorRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mMotorRActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mMotorR1ActionPerformed
+        if (plantaR.posVecMotor != 0 && (plantaR.prodMotor - 1) > 0) {
+            plantaR.desProdMotor();
+            plantaR.prodMotor--;
+        }
+    }//GEN-LAST:event_mMotorRActionPerformed
 
-    private void aMotorR1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aMotorR1ActionPerformed
+    private void aMotorRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aMotorRActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_aMotorR1ActionPerformed
+        if (plantaR.posVecMotor < plantaR.maxEmpleados && (plantaR.maxEmpleados - (plantaR.prodChasis + plantaR.prodCarroceria + plantaR.prodMotor + plantaR.prodRuedas + plantaR.prodAcces + plantaR.ensamblador) != 0)) {
+            plantaR.productorMotor();
+            plantaR.prodMotor++;
+        }
+    }//GEN-LAST:event_aMotorRActionPerformed
 
-    private void mMotorR2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mMotorR2ActionPerformed
+    private void mCarrocRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mCarrocRActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mMotorR2ActionPerformed
+        if (plantaR.posVecCarroc != 0 && (plantaR.prodCarroceria - 1) > 0) {
+            plantaR.desProdCarroc();
+            plantaR.prodCarroceria--;
+        }
+    }//GEN-LAST:event_mCarrocRActionPerformed
 
-    private void aMotorR2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aMotorR2ActionPerformed
+    private void aCarrocRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aCarrocRActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_aMotorR2ActionPerformed
+        if (plantaR.posVecCarroc < plantaR.maxEmpleados && (plantaR.maxEmpleados - (plantaR.prodChasis + plantaR.prodCarroceria + plantaR.prodMotor + plantaR.prodRuedas + plantaR.prodAcces + plantaR.ensamblador) != 0)) {
+            plantaR.productorCarroc();
+            plantaR.prodCarroceria++;
+        }
+    }//GEN-LAST:event_aCarrocRActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -962,13 +1011,13 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton aAccesB;
     private javax.swing.JButton aAccesR1;
     private javax.swing.JButton aCarrocB;
+    private javax.swing.JButton aCarrocR;
     private javax.swing.JButton aChasisB;
     private javax.swing.JButton aChasisR;
     private javax.swing.JButton aEnsamb;
     private javax.swing.JButton aEnsamb1;
     private javax.swing.JButton aMotorB;
-    private javax.swing.JButton aMotorR1;
-    private javax.swing.JButton aMotorR2;
+    private javax.swing.JButton aMotorR;
     private javax.swing.JButton aRuedasB;
     private javax.swing.JButton aRuedasR1;
     public javax.swing.JTextField cantAccesB;
@@ -986,15 +1035,15 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JTextField empAccesB;
     public javax.swing.JTextField empAccesoriosR;
     public javax.swing.JTextField empCarrocB;
+    public javax.swing.JTextField empCarrocR;
     public javax.swing.JTextField empChasisB;
     public javax.swing.JTextField empChasisR;
-    public javax.swing.JTextField empDisp;
     public javax.swing.JTextField empDispB;
+    public javax.swing.JTextField empDispR;
     public javax.swing.JTextField empEnsamb;
     public javax.swing.JTextField empEnsambB;
     public javax.swing.JTextField empMotorB;
-    public javax.swing.JTextField empMotorR1;
-    public javax.swing.JTextField empMotorR2;
+    public javax.swing.JTextField empMotorR;
     public javax.swing.JTextField empRuedasB;
     public javax.swing.JTextField empRuedasR;
     private javax.swing.JLabel ensamblaRlabel;
@@ -1041,13 +1090,13 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton mAccesB;
     private javax.swing.JButton mAccesR1;
     private javax.swing.JButton mCarrocB;
+    private javax.swing.JButton mCarrocR;
     private javax.swing.JButton mChasisB;
     private javax.swing.JButton mChasisR;
     private javax.swing.JButton mEnsamb;
     private javax.swing.JButton mEnsambB;
     private javax.swing.JButton mMotorB;
-    private javax.swing.JButton mMotorR1;
-    private javax.swing.JButton mMotorR2;
+    private javax.swing.JButton mMotorR;
     private javax.swing.JButton mRuedasB;
     private javax.swing.JButton mRuedasR;
     private javax.swing.JLabel plantaRlabel;
