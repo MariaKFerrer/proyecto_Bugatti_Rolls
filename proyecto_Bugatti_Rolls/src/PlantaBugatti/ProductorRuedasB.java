@@ -53,5 +53,9 @@ public class ProductorRuedasB extends Thread {
             }
         }
     }
+    
+    public void despRuedas(){
+        activo = false;
+    }
 
 }

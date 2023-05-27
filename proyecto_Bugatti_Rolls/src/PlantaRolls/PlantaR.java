@@ -109,7 +109,7 @@ public class PlantaR {
             DiaDuracion = 5;
         }
 
-        DiaDuracion = DiaDuracion * 200;
+        DiaDuracion = DiaDuracion * 500;
 
 
         DiasParaEntrega = parseInt(line.substring(17, 25).trim());
@@ -248,7 +248,7 @@ public class PlantaR {
     }
 
     public void crearContadorDias() {
-        Day day = new Day();
+        DayR day = new DayR();
         day.start();
     }
 
@@ -297,6 +297,38 @@ public class PlantaR {
         vecEnsamblador[posEnsamb].start();
         posEnsamb++;
     }
+    
+    public void despProdChasis(){
+        posVecChasis--;
+        vecProdChasis[posVecChasis].despChasis();
+    }
+    
+    public void desProdCarroc(){
+        posVecCarroc--;
+        vecProdCarroc[posVecChasis].despCarr();
+    }
+    
+    public void desProdMotor(){
+        posVecMotor--;
+        vecProdMotor[posVecMotor].despMotor();
+    }
+    
+    public void desProdRuedas(){
+        posVecRuedas--;
+        vecProdRuedas[posVecRuedas].despRuedas();
+    }
+    
+    public void desProdAcc(){
+        posVecAcc--;
+        vecProdAcc[posVecAcc].despAcc();
+    }
+    
+    public void desEnsamblador(){
+        posEnsamb--;
+        vecEnsamblador[posEnsamb].despEnsamb();
+    }
+    
+    
 
     public void cobros() {
         CobrosR cobros = new CobrosR();

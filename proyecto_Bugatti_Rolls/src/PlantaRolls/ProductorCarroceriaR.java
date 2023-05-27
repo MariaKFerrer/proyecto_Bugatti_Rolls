@@ -51,6 +51,10 @@ public class ProductorCarroceriaR extends Thread {
             }
         }
     }
+    
+    public void despCarr(){
+        activo = false;
+    }
   
 }
 

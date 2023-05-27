@@ -53,4 +53,8 @@ public class ProductorMotorR extends Thread {
             }
         }
     }
+    
+     public void despMotor(){
+        activo = false;
+    }
 }

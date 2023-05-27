@@ -49,5 +49,9 @@ public class ProductorAccesoriosR extends Thread {
             }
         }
     }
+    
+    public void despAcc(){
+        activo = false;
+    }
 }
 

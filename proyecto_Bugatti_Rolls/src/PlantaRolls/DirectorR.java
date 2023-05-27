@@ -42,12 +42,12 @@ public class DirectorR extends Thread {
                         DIR = "DIVAGANDO";
                     }
                     
-                } while (Day.day != diasParaEntrega);
+                } while (DayR.day != diasParaEntrega);
                 
                 reloj.acquire();
                 DIR = "DESPACHANDO";
                 Thread.sleep(PlantaR.DiaDuracion);
-                Day.day = PlantaR.DiasParaEntrega;
+                DayR.day = PlantaR.DiasParaEntrega;
                 DIR = "DESPACHADO";
                 Thread.sleep(PlantaR.DiaDuracion);
                 vehiculo.acquire();

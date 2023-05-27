@@ -203,7 +203,7 @@ public class PlantaB {
     }
 
     public void Start() throws ParseException, InterruptedException, FileNotFoundException {
-
+        System.out.println("Iniciando");
         iniciarValores();
         crearContadorDias();
         crearDirector();
@@ -234,7 +234,6 @@ public class PlantaB {
             cobros();
 
         }
-        System.out.println(ensamblador);
 
     }
 
@@ -288,10 +287,44 @@ public class PlantaB {
         vecEnsamblador[posEnsamb].start();
         posEnsamb++;
     }
+    
+    public void despProdChasis(){
+        posVecChasis--;
+        vecProdChasis[posVecChasis].despChasis();
+    }
+    
+    public void desProdCarroc(){
+        posVecCarroc--;
+        vecProdCarroc[posVecChasis].despCarr();
+    }
+    
+    public void desProdMotor(){
+        posVecMotor--;
+        vecProdMotor[posVecMotor].despMotor();
+    }
+    
+    public void desProdRuedas(){
+        posVecRuedas--;
+        vecProdRuedas[posVecRuedas].despRuedas();
+    }
+    
+    public void desProdAcc(){
+        posVecAcc--;
+        vecProdAcc[posVecAcc].despAcc();
+    }
+    
+    public void desEnsamblador(){
+        posEnsamb--;
+        vecEnsamblador[posEnsamb].despEnsamb();
+    }
+    
+    
 
     public void cobros() {
         CobrosB cobros = new CobrosB();
         cobros.start();
     }
+
+   
 
 }
