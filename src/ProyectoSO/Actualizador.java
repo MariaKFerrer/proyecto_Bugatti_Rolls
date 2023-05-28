@@ -65,6 +65,7 @@ public class Actualizador extends Thread {
             interfaz.empDispR.setText(String.valueOf(plantaR.maxEmpleados - (plantaR.prodChasis + plantaR.prodCarroceria + plantaR.prodMotor + plantaR.prodRuedas + plantaR.prodAcces + plantaR.ensamblador)));
             interfaz.cantidadVehiculosR1.setText(String.valueOf(PlantaR.vehiculo));
             interfaz.cantidadVehiculosR.setText(String.valueOf(PlantaR.vehiculoAcc));
+            
             interfaz.DiasRestantesR.setText(String.valueOf(DayR.day));
             interfaz.GananciasRolls.setText(String.valueOf(plantaR.ganancias));
             interfaz.CostosRolls.setText(String.valueOf(Math.abs(plantaR.gastos)));

@@ -13,7 +13,7 @@ import java.util.concurrent.Semaphore;
  */
 public class GerenteR extends Thread{
     
-    Semaphore Reloj = new Semaphore(1);
+        Semaphore Reloj = new Semaphore(1);
         public static int diasAntesEntrega;
         public static String G;
         private static boolean activo = true;
@@ -25,8 +25,7 @@ public class GerenteR extends Thread{
     
     @Override
         public void run(){
-            while(activo){
-                
+            while(activo){ 
                 try {
                     G = "F1 TIME";
                     Thread.sleep((PlantaR.DiaDuracion/72));
@@ -41,6 +40,12 @@ public class GerenteR extends Thread{
             }
         }
         
-        
+    public void Formula1() throws InterruptedException{
+        for(int i = 0; i <= 2; i++){
+            G = "F1 TIME";
+            Thread.sleep((PlantaR.DiaDuracion/48)); 
+        }
+    }
+
 }
 

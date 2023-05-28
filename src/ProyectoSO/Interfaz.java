@@ -40,6 +40,7 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         DiasLabelB = new javax.swing.JLabel();
         DiasRestantes = new javax.swing.JTextField();
@@ -147,18 +148,25 @@ public class Interfaz extends javax.swing.JFrame {
         aMotorR = new javax.swing.JButton();
         mCarrocR = new javax.swing.JButton();
         aCarrocR = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(1, 0), new java.awt.Dimension(1, 0), new java.awt.Dimension(1, 32767));
         Background = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        setPreferredSize(new java.awt.Dimension(850, 478));
+        setMinimumSize(new java.awt.Dimension(855, 490));
+        setSize(new java.awt.Dimension(850, 495));
+        addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                formComponentAdded(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Costos");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 490, -1, 10));
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 450, -1, 10));
 
         DiasLabelB.setForeground(new java.awt.Color(255, 255, 255));
         DiasLabelB.setText("Dias restantes ");
@@ -294,11 +302,11 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ganancias");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, -1, 10));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, -1, 10));
 
         gananciasRlabel.setForeground(new java.awt.Color(255, 255, 255));
         gananciasRlabel.setText("Ganancias");
-        getContentPane().add(gananciasRlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 490, -1, 10));
+        getContentPane().add(gananciasRlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, -1, 10));
 
         GananciasRolls.setBackground(new java.awt.Color(0, 102, 153));
         GananciasRolls.setForeground(new java.awt.Color(255, 255, 255));
@@ -738,10 +746,11 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(aCarrocR, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 50, 30));
+        getContentPane().add(filler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/Sirve2.png"))); // NOI18N
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 470));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -991,6 +1000,10 @@ public class Interfaz extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_aCarrocRActionPerformed
 
+    private void formComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_formComponentAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formComponentAdded
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
@@ -1050,6 +1063,7 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JTextField empRuedasB;
     public javax.swing.JTextField empRuedasR;
     private javax.swing.JLabel ensamblaRlabel;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel gananciasRlabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1079,6 +1093,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JLabel labelCarroc;
     private javax.swing.JLabel labelCarroc1;
     private javax.swing.JLabel labelCarroc2;
