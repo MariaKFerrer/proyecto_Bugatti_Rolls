@@ -371,6 +371,11 @@ public class Interfaz extends javax.swing.JFrame {
 
         cantidadChasisR.setBackground(new java.awt.Color(0, 102, 153));
         cantidadChasisR.setForeground(new java.awt.Color(255, 255, 255));
+        cantidadChasisR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cantidadChasisRActionPerformed(evt);
+            }
+        });
         getContentPane().add(cantidadChasisR, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 180, 80, -1));
 
         cantidadCarrR.setBackground(new java.awt.Color(0, 102, 153));
@@ -573,7 +578,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Empleados");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, -1, -1));
 
         empChasisR.setBackground(new java.awt.Color(0, 102, 153));
         empChasisR.setForeground(new java.awt.Color(255, 255, 255));
@@ -601,7 +606,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("Empleados");
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, -1, -1));
+        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 160, -1, -1));
 
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Disponibles");
@@ -631,6 +636,11 @@ public class Interfaz extends javax.swing.JFrame {
 
         empDispB.setBackground(new java.awt.Color(0, 102, 153));
         empDispB.setForeground(new java.awt.Color(255, 255, 255));
+        empDispB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empDispBActionPerformed(evt);
+            }
+        });
         getContentPane().add(empDispB, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 90, 20));
 
         cantAccesB.setBackground(new java.awt.Color(0, 102, 153));
@@ -1003,6 +1013,14 @@ public class Interfaz extends javax.swing.JFrame {
     private void formComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_formComponentAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_formComponentAdded
+
+    private void empDispBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empDispBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empDispBActionPerformed
+
+    private void cantidadChasisRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cantidadChasisRActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cantidadChasisRActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
