@@ -10,37 +10,51 @@ import java.util.concurrent.Semaphore;
  *
  * @author Marcelo
  */
-public class GerenteB extends Thread{
-    
-        Semaphore Reloj = new Semaphore(1);
-        public static int diasAntesEntrega;
-        public static String G;
-        private static boolean activo = true;
-        
-        public GerenteB (Semaphore Reloj){
-            this.Reloj = Reloj;
-            G = "";
-        }
-    
+public class GerenteB extends Thread {
+
+    Semaphore Reloj = new Semaphore(1);
+    public static int diasAntesEntrega;
+    public static String G;
+    private static boolean activo = true;
+    private static int F1 = 0;
+
+    public GerenteB(Semaphore Reloj) {
+        this.Reloj = Reloj;
+        G = "";
+    }
+
     @Override
-        public void run(){
-            while(activo){
-                
-                try {
-                    G = "F1 TIME";
-                    Thread.sleep((PlantaB.DiaDuracion/72));
-                    G = "SPRINT";
-                    Thread.sleep((PlantaB.DiaDuracion/72));
-                    Reloj.acquire();
-                        G = "CONTADOR";
-                        Thread.sleep(PlantaB.DiaDuracion/24);
-                    Reloj.release();
-                } catch (Exception e) {
-                }
+    public void run() {
+        while (activo) {
+
+            try {
+                F1 = 0;
+                this.Formula1();
+                Reloj.acquire();
+                G = "CONTADOR";
+
+                Thread.sleep(PlantaB.DiaDuracion / 3);
+                Reloj.release();
+            } catch (Exception e) {
             }
         }
-        
-        public static void F1(){
-            activo = false;
-        } 
+    }
+
+    public void Formula1() throws InterruptedException {
+        while (F1 < 16) {
+            G = "F1 TIME";
+//            System.out.println(G);
+            Thread.sleep((PlantaB.DiaDuracion / 48));
+            G = "SPRINT";
+//            System.out.println(G);
+
+            Thread.sleep((PlantaB.DiaDuracion / 48));
+            F1++;
+        }
+    }
+
+    public static void despGB() {
+        activo = false;
+    }
+
 }

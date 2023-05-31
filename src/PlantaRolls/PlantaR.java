@@ -379,9 +379,12 @@ public class PlantaR {
             vecProdRuedas[posVecRuedas].despRuedas();
 
         }
+        
+        GerenteR.despGR();
 
         DayR.stopDay();
         CobrosR.stopCobros();
+        
         Actualizador.stopAct();
     }
 

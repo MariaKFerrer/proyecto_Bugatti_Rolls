@@ -19,7 +19,7 @@ public class DirectorR extends Thread {
     
     public static int diasParaEntrega;
     public static String DIR;
-    public static int contadorRM = 0;
+    public static int contadorF1 = 0;
     public static int Mes = 30;
     private static boolean activo = true;
     
@@ -33,14 +33,18 @@ public class DirectorR extends Thread {
     public void run(){
         while(activo){
             try {
-                do {                    
-                    Thread.sleep(Math.round(Math.random() * (PlantaR.DiaDuracion/16 - PlantaR.DiaDuracion/48) + PlantaR.DiaDuracion/48));
+                do {             
                     DIR ="Revisando";
+                    Thread.sleep(PlantaR.DiaDuracion/56);
+                    
                     if("F1 TIME".equals(GerenteR.G)){
 //                        System.out.println("Gerente atrapado viendo F1");
-                        contadorRM++;
-                        DIR = "DIVAGANDO";
+                        contadorF1++;
+                       
                     }
+                     DIR = "Trabajando";
+                    
+                    Thread.sleep(PlantaR.DiaDuracion);
                     
                 } while (DayR.day != diasParaEntrega);
                 

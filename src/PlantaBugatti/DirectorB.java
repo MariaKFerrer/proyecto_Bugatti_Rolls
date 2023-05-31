@@ -34,16 +34,18 @@ public class DirectorB extends Thread {
         while (activo) {
             try {
                 do {
-                    Thread.sleep(Math.round(Math.random() * (PlantaB.DiaDuracion / 16 - PlantaB.DiaDuracion / 48) + PlantaB.DiaDuracion / 48));
                     DIR = "Revisando";
+                    Thread.sleep(PlantaB.DiaDuracion / 56);
+
                     if ("F1 TIME".equals(GerenteB.G)) {
-//                        System.out.println("Gerente atrapado viendo F1");
                         contadorF1++;
-                        DIR = "DIVAGANDO";
+
                     }
+                    DIR = "Trabajando";
+                    Thread.sleep(PlantaB.DiaDuracion);
 
                 } while (Day.day != diasParaEntrega);
-               
+
                 reloj.acquire();
                 DIR = "DESPACHANDO";
                 Thread.sleep(PlantaB.DiaDuracion);
@@ -52,7 +54,7 @@ public class DirectorB extends Thread {
                 CobrosB.stopCobros();
                 Day.stopDay();
                 Thread.sleep(PlantaB.DiaDuracion);
-                
+
                 vehiculo.acquire();
                 System.out.println(PlantaB.ganancias);
                 System.out.println("Vehiculos normales: " + (450000 * PlantaB.vehiculo));
@@ -71,7 +73,7 @@ public class DirectorB extends Thread {
                 PlantaB.ganancias = PlantaB.ganancias + PlantaB.gastos;
                 System.out.println("Gastos: " + PlantaB.gastos);
                 System.out.println("Ganancias: " + PlantaB.ganancias);
-                 PlantaB.stopAll();
+                PlantaB.stopAll();
 
             } catch (Exception e) {
             }

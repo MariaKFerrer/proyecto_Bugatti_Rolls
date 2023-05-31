@@ -5,9 +5,12 @@
 package ProyectoSO;
 
 import PlantaBugatti.Day;
+import PlantaBugatti.DirectorB;
+import static PlantaBugatti.DirectorB.DIR;
 import PlantaBugatti.PlantaB;
 import PlantaRolls.PlantaR;
 import PlantaRolls.DayR;
+import PlantaRolls.DirectorR;
 
 /**
  *
@@ -45,10 +48,12 @@ public class Actualizador extends Thread {
             interfaz.empAccesB.setText(String.valueOf(plantaB.prodAcces));
             interfaz.empEnsambB.setText(String.valueOf(plantaB.ensamblador));
             interfaz.empDispB.setText(String.valueOf(plantaB.maxEmpleados - (plantaB.prodChasis + plantaB.prodCarroceria + plantaB.prodMotor + plantaB.prodRuedas + plantaB.prodAcces + plantaB.ensamblador)));
-
+            interfaz.DirectorB.setText(DirectorB.DIR);
             interfaz.CostosBugatti.setText(String.valueOf(Math.abs(plantaB.gastos)));
             interfaz.GananciasBugatti.setText(String.valueOf(plantaB.ganancias));
             interfaz.DiasRestantes.setText(String.valueOf(Day.day));
+            interfaz.FaltasGerenteB.setText(String.valueOf(DirectorB.contadorF1));
+            interfaz.SalarioGerenteB.setText(String.valueOf(DirectorB.contadorF1 * 50));
 
             interfaz.cantidadChasisR.setText(String.valueOf(plantaR.Chasis));
             interfaz.cantidadCarrR.setText(String.valueOf(plantaR.Chasis));
@@ -65,6 +70,9 @@ public class Actualizador extends Thread {
             interfaz.empDispR.setText(String.valueOf(plantaR.maxEmpleados - (plantaR.prodChasis + plantaR.prodCarroceria + plantaR.prodMotor + plantaR.prodRuedas + plantaR.prodAcces + plantaR.ensamblador)));
             interfaz.cantidadVehiculosR1.setText(String.valueOf(PlantaR.vehiculo));
             interfaz.cantidadVehiculosR.setText(String.valueOf(PlantaR.vehiculoAcc));
+            interfaz.FaltasGerenteR.setText(String.valueOf(DirectorR.contadorF1));
+            interfaz.DirectorR.setText(DirectorR.DIR);
+            interfaz.SalarioGerenteR.setText(String.valueOf(DirectorR.contadorF1 * 50));
             
             interfaz.DiasRestantesR.setText(String.valueOf(DayR.day));
             interfaz.GananciasRolls.setText(String.valueOf(plantaR.ganancias));

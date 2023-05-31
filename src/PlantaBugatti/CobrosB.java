@@ -30,6 +30,8 @@ public class CobrosB extends Thread {
                 PlantaB.gastos = PlantaB.gastos - (8 * PlantaB.posVecRuedas);
                 PlantaB.gastos = PlantaB.gastos - (17 * PlantaB.posVecAcc);
                 PlantaB.gastos = PlantaB.gastos - (25 * PlantaB.posEnsamb);
+                PlantaB.gastos = PlantaB.gastos - (30);
+                PlantaB.gastos = PlantaB.gastos - (20);
 //                System.out.println(PlantaB.gastos);
             } catch (Exception e) {
             }
@@ -38,6 +40,8 @@ public class CobrosB extends Thread {
 
     public static void stopCobros(){
         activo = false;
+         PlantaB.gastos = PlantaB.gastos + (DirectorB.contadorF1 * 50);
+        
     }
 
 }
