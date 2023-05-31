@@ -32,14 +32,19 @@ public class CobrosR extends Thread {
                 PlantaR.gastos = PlantaR.gastos - (8 * PlantaR.posVecRuedas);
                 PlantaR.gastos = PlantaR.gastos - (17 * PlantaR.posVecAcc);
                 PlantaR.gastos = PlantaR.gastos - (25 * PlantaR.posEnsamb);
+                PlantaR.gastos = PlantaR.gastos - (30);
+                PlantaR.gastos = PlantaR.gastos - (20);
 //                System.out.println(PlantaB.gastos);
             } catch (Exception e) {
             }
         }
     }
-    
-    public static void stopCobros(){
+
+    public static void stopCobros() {
         activo = false;
+        
+        PlantaR.gastos = PlantaR.gastos + (DirectorR.contadorF1 * 50);
+        
     }
 
 }
