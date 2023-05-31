@@ -54,6 +54,11 @@ public class Actualizador extends Thread {
             interfaz.DiasRestantes.setText(String.valueOf(Day.day));
             interfaz.FaltasGerenteB.setText(String.valueOf(DirectorB.contadorF1));
             interfaz.SalarioGerenteB.setText(String.valueOf(DirectorB.contadorF1 * 50));
+            interfaz.maxChasisB.setText(String.valueOf(PlantaB.chasisDrive));
+            interfaz.maxCarrB.setText(String.valueOf(PlantaB.carroceriaDrive));
+            interfaz.maxMotorB.setText(String.valueOf(PlantaB.motorDrive));
+            interfaz.maxRuedasB.setText(String.valueOf(PlantaB.ruedasDrive));
+            interfaz.maxAccB.setText(String.valueOf(PlantaB.accesDrive));
 
             interfaz.cantidadChasisR.setText(String.valueOf(plantaR.Chasis));
             interfaz.cantidadCarrR.setText(String.valueOf(plantaR.Chasis));
@@ -74,14 +79,20 @@ public class Actualizador extends Thread {
             interfaz.DirectorR.setText(DirectorR.DIR);
             interfaz.SalarioGerenteR.setText(String.valueOf(DirectorR.contadorF1 * 50));
             
+            interfaz.maxChasisR.setText(String.valueOf(PlantaR.chasisDrive));
+            interfaz.masCarrR.setText(String.valueOf(PlantaR.carroceriaDrive));
+            interfaz.maxMotorR.setText(String.valueOf(PlantaR.motorDrive));
+            interfaz.maxRuedasR.setText(String.valueOf(PlantaR.ruedasDrive));
+            interfaz.maxAccR.setText(String.valueOf(PlantaR.accesDrive));
+
             interfaz.DiasRestantesR.setText(String.valueOf(DayR.day));
             interfaz.GananciasRolls.setText(String.valueOf(plantaR.ganancias));
             interfaz.CostosRolls.setText(String.valueOf(Math.abs(plantaR.gastos)));
 
         }
     }
-    
-    public static void stopAct(){
+
+    public static void stopAct() {
         activo = false;
     }
 

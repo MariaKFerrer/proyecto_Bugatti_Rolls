@@ -852,7 +852,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         maxMotorB.setBackground(new java.awt.Color(0, 102, 153));
         maxMotorB.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(maxMotorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 60, -1));
+        getContentPane().add(maxMotorB, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 60, 20));
 
         maxRuedasB.setBackground(new java.awt.Color(0, 102, 153));
         maxRuedasB.setForeground(new java.awt.Color(255, 255, 255));
@@ -1263,16 +1263,16 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton mMotorR;
     private javax.swing.JButton mRuedasB;
     private javax.swing.JButton mRuedasR;
-    private javax.swing.JTextField masCarrR;
-    private javax.swing.JTextField maxAccB;
-    private javax.swing.JTextField maxAccR;
-    private javax.swing.JTextField maxCarrB;
-    private javax.swing.JTextField maxChasisB;
-    private javax.swing.JTextField maxChasisR;
-    private javax.swing.JTextField maxMotorB;
-    private javax.swing.JTextField maxMotorR;
-    private javax.swing.JTextField maxRuedasB;
-    private javax.swing.JTextField maxRuedasR;
+    public javax.swing.JTextField masCarrR;
+    public javax.swing.JTextField maxAccB;
+    public javax.swing.JTextField maxAccR;
+    public javax.swing.JTextField maxCarrB;
+    public javax.swing.JTextField maxChasisB;
+    public javax.swing.JTextField maxChasisR;
+    public javax.swing.JTextField maxMotorB;
+    public javax.swing.JTextField maxMotorR;
+    public javax.swing.JTextField maxRuedasB;
+    public javax.swing.JTextField maxRuedasR;
     private javax.swing.JLabel plantaRlabel;
     private javax.swing.JLabel salarioGerR;
     public javax.swing.JTextField vehiculosAccB;
