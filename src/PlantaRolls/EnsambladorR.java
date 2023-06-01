@@ -87,14 +87,11 @@ public class EnsambladorR extends Thread {
             try {
                 if ((PlantaR.Chasis >= 3) && (PlantaR.Carroceria >= 2) && (PlantaR.Motor >= 4) && (PlantaR.Ruedas >= 6)) {
                     System.out.println("Ensamblando");
-//                    System.out.println("\n Chasis: " + PlantaR.Chasis);
-//                    System.out.println("\n Carroceria: " + PlantaR.Carroceria);
-//                    System.out.println("\n Motor: " + PlantaR.Motor);
-//                    System.out.println("\n Ruedas: " + PlantaR.Ruedas);
+
                     if ((PlantaR.contadorVehiculos % 6 != 0) || (PlantaR.contadorVehiculos == 0)) {
 
                         Thread.sleep(PlantaR.DiaDuracion * 2);
-
+                        this.eCarroceria.acquire();
                         this.mCarroceria.acquire();
 //                        this.pCarroceria.acquire();
 
@@ -104,7 +101,9 @@ public class EnsambladorR extends Thread {
 //                        System.out.println( PlantaB.Carroceria);
 //                        this.pCarroceria.release();
                         this.mCarroceria.release();
+                        this.eCarroceria.release();
 
+                        this.eChasis.acquire();
                         this.mChasis.acquire();
 //                        this.pChasis.acquire();
                         driveChasis.consumirChasis();
@@ -112,9 +111,11 @@ public class EnsambladorR extends Thread {
                         driveChasis.consumirChasis();
                         PlantaR.Chasis = PlantaR.Chasis - 3;
 //                        System.out.println( PlantaB.Chasis);
-                        this.pChasis.release();
+//                        this.pChasis.release();
                         this.mChasis.release();
+                        this.eChasis.release();
 
+                        this.eMotor.acquire();
                         this.mMotor.acquire();
 //                        this.pMotor.acquire();
                         driveMotor.consumirMotor();
@@ -124,9 +125,11 @@ public class EnsambladorR extends Thread {
                         PlantaR.Motor = PlantaR.Motor - 4;
 //                        System.out.println( PlantaB.Motor);
                         this.mMotor.release();
+                        this.eMotor.release();
 //                        this.pMotor.release();
 
 //                        this.pRuedas.acquire();
+                        this.eRuedas.acquire();
                         this.mRuedas.acquire();
                         driveRuedas.consumirRuedas();
                         driveRuedas.consumirRuedas();
@@ -137,6 +140,7 @@ public class EnsambladorR extends Thread {
                         PlantaR.Ruedas = PlantaR.Ruedas - 6;
 //                        System.out.println( PlantaB.Ruedas);
                         this.mRuedas.release();
+                        this.eRuedas.release();
 //                        this.pRuedas.release();
                         System.out.println("Vehiculo ensamblado");
                         vehiculo.acquire();
@@ -149,15 +153,18 @@ public class EnsambladorR extends Thread {
                         Thread.sleep(PlantaR.DiaDuracion * 2);
 
 //                        this.pCarroceria.acquire();
+                        this.eCarroceria.acquire();
                         this.mCarroceria.acquire();
                         driveCarroc.consumirCarroceria();
                         driveCarroc.consumirCarroceria();
                         PlantaR.Carroceria = PlantaR.Carroceria - 2;
 //                        System.out.println( PlantaB.Carroceria);
                         this.mCarroceria.release();
+                        this.eCarroceria.release();
 //                        this.pCarroceria.release();
 
 //                        this.pChasis.acquire();
+                        this.eChasis.acquire();
                         this.mChasis.acquire();
                         driveChasis.consumirChasis();
                         driveChasis.consumirChasis();
@@ -165,9 +172,11 @@ public class EnsambladorR extends Thread {
                         PlantaR.Chasis = PlantaR.Chasis - 3;
 //                        System.out.println( PlantaB.Chasis);
                         this.mChasis.release();
+                        this.eChasis.release();
 //                        this.pChasis.release();
 
 //                        this.pMotor.acquire();
+                        this.eMotor.acquire();
                         this.mMotor.acquire();
                         driveMotor.consumirMotor();
                         driveMotor.consumirMotor();
@@ -176,9 +185,11 @@ public class EnsambladorR extends Thread {
                         PlantaR.Motor = PlantaR.Motor - 4;
 //                        System.out.println( PlantaB.Motor);
                         this.mMotor.release();
+                         this.eMotor.release();
 //                        this.pMotor.release();
 
 //                        this.pRuedas.acquire();
+                        this.eRuedas.acquire();
                         this.mRuedas.acquire();
                         driveRuedas.consumirRuedas();
                         driveRuedas.consumirRuedas();
@@ -189,9 +200,11 @@ public class EnsambladorR extends Thread {
                         PlantaR.Ruedas = PlantaR.Ruedas - 6;
 //                        System.out.println( PlantaB.Ruedas);
                         this.mRuedas.release();
+                         this.eRuedas.release();
 //                        this.pRuedas.release();
 
 //                        this.pAcces.acquire();
+                         this.eAcces.acquire();
                         this.mAcces.acquire();
                         driveAcces.consumirAcces();
                         driveAcces.consumirAcces();
@@ -200,6 +213,7 @@ public class EnsambladorR extends Thread {
                         driveAcces.consumirAcces();
                         PlantaR.Acces = PlantaR.Acces - 5;
                         this.mAcces.release();
+                        this.eAcces.release();
 //                        this.pAcces.release();
 
                         vehiculoAcc.acquire();
@@ -229,8 +243,8 @@ public class EnsambladorR extends Thread {
             }
         }
     }
-    
-     public void despEnsamb(){
+
+    public void despEnsamb() {
         activo = false;
     }
 

@@ -79,11 +79,11 @@ public class PlantaB {
     Semaphore mRuedas = new Semaphore(1);
     Semaphore mAcces = new Semaphore(1);
 
-    Semaphore eChasis = new Semaphore(0);
-    Semaphore eCarroceria = new Semaphore(0);
-    Semaphore eMotor = new Semaphore(0);
-    Semaphore eRuedas = new Semaphore(0);
-    Semaphore eAcces = new Semaphore(0);
+    Semaphore eChasis = new Semaphore(1);
+    Semaphore eCarroceria = new Semaphore(2);
+    Semaphore eMotor = new Semaphore(4);
+    Semaphore eRuedas = new Semaphore(4);
+    Semaphore eAcces = new Semaphore(2);
 
     Semaphore Reloj = new Semaphore(1);
 
