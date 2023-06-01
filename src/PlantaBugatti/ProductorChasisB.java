@@ -47,7 +47,7 @@ public class ProductorChasisB extends Thread {
                 }
 //                    System.out.println("Chasis: " + PlantaB.Chasis);
                 mutex.release();
-                ensamblador.release();
+//                ensamblador.release();
                 productor.release();
 
             } catch (Exception e) {
