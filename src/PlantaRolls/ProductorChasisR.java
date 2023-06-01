@@ -6,6 +6,7 @@
 package PlantaRolls;
 
 import java.util.concurrent.Semaphore;
+
 /**
  *
  * @author mkferrerteran
@@ -30,30 +31,32 @@ public class ProductorChasisR extends Thread {
         while (activo) {
             try {
 
-                    productor.acquire();
+                productor.acquire();
 
-                    if (0 <= num && num < 3) {
-                        this.sleep(PlantaR.DiaDuracion * 2);
-                    } else if (3 <= num && num < 6) {
-                        this.sleep(PlantaR.DiaDuracion * 3);
-                    } else {
-                        this.sleep(PlantaR.DiaDuracion * 4);
-                    }
-                    mutex.acquire();
+                if (0 <= num && num < 3) {
+                    this.sleep(PlantaR.DiaDuracion * 2);
+                } else if (3 <= num && num < 6) {
+                    this.sleep(PlantaR.DiaDuracion * 3);
+                } else {
+                    this.sleep(PlantaR.DiaDuracion * 4);
+                }
+                mutex.acquire();
+                if (PlantaR.Chasis < PlantaR.chasisDrive) {
                     drive.producirChasis();
 
                     PlantaR.Chasis++;
+                }
 //                    System.out.println("Chasis: " + PlantaB.Chasis);
-                    mutex.release();
-                    ensamblador.release();
-
+                mutex.release();
+                ensamblador.release();
+                productor.release();
 
             } catch (Exception e) {
             }
         }
     }
-    
-     public void despChasis(){
+
+    public void despChasis() {
         activo = false;
     }
 

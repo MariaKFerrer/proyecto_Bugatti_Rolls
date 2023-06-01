@@ -31,27 +31,32 @@ public class ProductorAccesoriosB extends Thread {
         while (activo) {
             try {
 
-                    productor.acquire();
+                productor.acquire();
 
-                    if (0 <= num && num < 3) {
-                        this.sleep(PlantaB.DiaDuracion * 3);
-                    } else {
-                        this.sleep(PlantaB.DiaDuracion * 2);
-                    }
-                    mutex.acquire();
+                if (0 <= num && num < 3) {
+                    this.sleep(PlantaB.DiaDuracion * 3);
+                } else {
+                    this.sleep(PlantaB.DiaDuracion * 2);
+                }
+
+                mutex.acquire();
+
+                if (PlantaB.Acces < PlantaB.accesDrive) {
                     drive.producirAcces();
-
                     PlantaB.Acces++;
+                }
+
 //                    System.out.println("Accesorios: " + PlantaB.Acces);
-                    mutex.release();
-                    ensamblador.release();
+                mutex.release();
+                ensamblador.release();
+                productor.release();
 
             } catch (Exception e) {
             }
         }
     }
-    
-    public void despAcc(){
+
+    public void despAcc() {
         activo = false;
     }
 

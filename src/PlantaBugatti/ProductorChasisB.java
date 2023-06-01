@@ -30,30 +30,32 @@ public class ProductorChasisB extends Thread {
         while (activo) {
             try {
 
-                    productor.acquire();
+                productor.acquire();
 
-                    if (0 <= num && num < 3) {
-                        this.sleep(PlantaB.DiaDuracion * 2);
-                    } else if (3 <= num && num < 6) {
-                        this.sleep(PlantaB.DiaDuracion * 3);
-                    } else {
-                        this.sleep(PlantaB.DiaDuracion * 4);
-                    }
-                    mutex.acquire();
+                if (0 <= num && num < 3) {
+                    this.sleep(PlantaB.DiaDuracion * 2);
+                } else if (3 <= num && num < 6) {
+                    this.sleep(PlantaB.DiaDuracion * 3);
+                } else {
+                    this.sleep(PlantaB.DiaDuracion * 4);
+                }
+                mutex.acquire();
+                if (PlantaB.Chasis < PlantaB.chasisDrive) {
                     drive.producirChasis();
 
                     PlantaB.Chasis++;
+                }
 //                    System.out.println("Chasis: " + PlantaB.Chasis);
-                    mutex.release();
-                    ensamblador.release();
-
+                mutex.release();
+                ensamblador.release();
+                productor.release();
 
             } catch (Exception e) {
             }
         }
     }
-    
-    public void despChasis(){
+
+    public void despChasis() {
         activo = false;
     }
 

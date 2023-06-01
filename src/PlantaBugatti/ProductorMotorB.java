@@ -30,32 +30,34 @@ public class ProductorMotorB extends Thread {
     public void run() {
         while (activo) {
             try {
-                
-                    productor.acquire();
 
-                    if (0 <= num && num < 3) {
-                        this.sleep(PlantaB.DiaDuracion / 3);
-                    } else if (3 <= num && num < 6) {
-                        this.sleep(PlantaB.DiaDuracion / 2);
+                productor.acquire();
 
-                    } else {
-                        this.sleep(PlantaB.DiaDuracion);
-                    }
-                    mutex.acquire();
+                if (0 <= num && num < 3) {
+                    this.sleep(PlantaB.DiaDuracion / 3);
+                } else if (3 <= num && num < 6) {
+                    this.sleep(PlantaB.DiaDuracion / 2);
+
+                } else {
+                    this.sleep(PlantaB.DiaDuracion);
+                }
+                mutex.acquire();
+                if (PlantaB.Motor < PlantaB.motorDrive) {
                     drive.producirMotor();
 
                     PlantaB.Motor++;
+                }
 //                    System.out.println("Motor: " + PlantaB.Motor);
-                    mutex.release();
-                    ensamblador.release();
-
+                mutex.release();
+                ensamblador.release();
+                productor.release();
 
             } catch (Exception e) {
             }
         }
     }
-    
-    public void despMotor(){
+
+    public void despMotor() {
         activo = false;
     }
 

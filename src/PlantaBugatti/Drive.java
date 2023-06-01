@@ -85,18 +85,12 @@ public class Drive {
 
     public void producirRuedas() {
         this.ruedas[eRuedas] = 1;
-        System.out.println("eruedas " + eRuedas);
-        System.out.println("Drive ruedas " + this.ruedas[eRuedas]);
         eRuedas = (eRuedas + 1) % PlantaB.ruedasDrive;
-        System.out.println("Modulo " +eRuedas );
-        
 
     }
 
     public void consumirRuedas() {
         this.ruedas[sRuedas] = 0;
-        System.out.println("Drive ruedas " + this.ruedas[sRuedas]);
-        System.out.println("sruedas " + sRuedas);
         sRuedas = (sRuedas + 1) % PlantaB.ruedasDrive;
 
     }
