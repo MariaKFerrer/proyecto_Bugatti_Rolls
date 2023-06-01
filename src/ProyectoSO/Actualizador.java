@@ -7,10 +7,12 @@ package ProyectoSO;
 import PlantaBugatti.Day;
 import PlantaBugatti.DirectorB;
 import static PlantaBugatti.DirectorB.DIR;
+import PlantaBugatti.GerenteB;
 import PlantaBugatti.PlantaB;
 import PlantaRolls.PlantaR;
 import PlantaRolls.DayR;
 import PlantaRolls.DirectorR;
+import PlantaRolls.GerenteR;
 
 /**
  *
@@ -59,6 +61,7 @@ public class Actualizador extends Thread {
             interfaz.maxMotorB.setText(String.valueOf(PlantaB.motorDrive));
             interfaz.maxRuedasB.setText(String.valueOf(PlantaB.ruedasDrive));
             interfaz.maxAccB.setText(String.valueOf(PlantaB.accesDrive));
+            interfaz.estadoGerenteB.setText(GerenteB.G);
 
             interfaz.cantidadChasisR.setText(String.valueOf(plantaR.Chasis));
             interfaz.cantidadCarrR.setText(String.valueOf(plantaR.Chasis));
@@ -84,6 +87,7 @@ public class Actualizador extends Thread {
             interfaz.maxMotorR.setText(String.valueOf(PlantaR.motorDrive));
             interfaz.maxRuedasR.setText(String.valueOf(PlantaR.ruedasDrive));
             interfaz.maxAccR.setText(String.valueOf(PlantaR.accesDrive));
+            interfaz.estadoGerenteR.setText(GerenteR.G);
 
             interfaz.DiasRestantesR.setText(String.valueOf(DayR.day));
             interfaz.GananciasRolls.setText(String.valueOf(plantaR.ganancias));

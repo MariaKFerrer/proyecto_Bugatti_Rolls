@@ -46,7 +46,7 @@ public class Interfaz extends javax.swing.JFrame {
         DiasRestantes = new javax.swing.JTextField();
         labelGerenteB = new javax.swing.JLabel();
         LabelDirecB = new javax.swing.JLabel();
-        SalarioGerenteB = new javax.swing.JTextField();
+        estadoGerenteB = new javax.swing.JTextField();
         DirectorB = new javax.swing.JTextField();
         FaltasGerenteB = new javax.swing.JTextField();
         labelFaltasGB = new javax.swing.JLabel();
@@ -56,7 +56,7 @@ public class Interfaz extends javax.swing.JFrame {
         salarioGerR = new javax.swing.JLabel();
         LabelGerR1 = new javax.swing.JLabel();
         LabelFaltasGerR = new javax.swing.JLabel();
-        SalarioGerenteR = new javax.swing.JTextField();
+        estadoGerenteR = new javax.swing.JTextField();
         FaltasGerenteR = new javax.swing.JTextField();
         labeldirecR = new javax.swing.JLabel();
         DirectorR = new javax.swing.JTextField();
@@ -163,6 +163,8 @@ public class Interfaz extends javax.swing.JFrame {
         maxCarrB = new javax.swing.JTextField();
         maxMotorB = new javax.swing.JTextField();
         maxRuedasB = new javax.swing.JTextField();
+        SalarioGerenteB = new javax.swing.JTextField();
+        SalarioGerenteR = new javax.swing.JTextField();
         Background = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
@@ -198,14 +200,14 @@ public class Interfaz extends javax.swing.JFrame {
         LabelDirecB.setText("Director");
         getContentPane().add(LabelDirecB, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, -1, -1));
 
-        SalarioGerenteB.setBackground(new java.awt.Color(0, 102, 153));
-        SalarioGerenteB.setForeground(new java.awt.Color(255, 255, 255));
-        SalarioGerenteB.addActionListener(new java.awt.event.ActionListener() {
+        estadoGerenteB.setBackground(new java.awt.Color(0, 102, 153));
+        estadoGerenteB.setForeground(new java.awt.Color(255, 255, 255));
+        estadoGerenteB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalarioGerenteBActionPerformed(evt);
+                estadoGerenteBActionPerformed(evt);
             }
         });
-        getContentPane().add(SalarioGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 60, -1));
+        getContentPane().add(estadoGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 60, -1));
 
         DirectorB.setBackground(new java.awt.Color(0, 102, 153));
         DirectorB.setForeground(new java.awt.Color(255, 255, 255));
@@ -249,14 +251,14 @@ public class Interfaz extends javax.swing.JFrame {
         LabelFaltasGerR.setText("Faltas");
         getContentPane().add(LabelFaltasGerR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 100, -1, 10));
 
-        SalarioGerenteR.setBackground(new java.awt.Color(0, 102, 153));
-        SalarioGerenteR.setForeground(new java.awt.Color(255, 255, 255));
-        SalarioGerenteR.addActionListener(new java.awt.event.ActionListener() {
+        estadoGerenteR.setBackground(new java.awt.Color(0, 102, 153));
+        estadoGerenteR.setForeground(new java.awt.Color(255, 255, 255));
+        estadoGerenteR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalarioGerenteRActionPerformed(evt);
+                estadoGerenteRActionPerformed(evt);
             }
         });
-        getContentPane().add(SalarioGerenteR, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 120, 60, -1));
+        getContentPane().add(estadoGerenteR, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 60, -1));
 
         FaltasGerenteR.setBackground(new java.awt.Color(0, 102, 153));
         FaltasGerenteR.setForeground(new java.awt.Color(255, 255, 255));
@@ -625,7 +627,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("Empleados");
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, -1, -1));
+        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, -1, -1));
 
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Empleados disponibles");
@@ -858,6 +860,24 @@ public class Interfaz extends javax.swing.JFrame {
         maxRuedasB.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(maxRuedasB, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 60, -1));
 
+        SalarioGerenteB.setBackground(new java.awt.Color(0, 102, 153));
+        SalarioGerenteB.setForeground(new java.awt.Color(255, 255, 255));
+        SalarioGerenteB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalarioGerenteBActionPerformed(evt);
+            }
+        });
+        getContentPane().add(SalarioGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 60, -1));
+
+        SalarioGerenteR.setBackground(new java.awt.Color(0, 102, 153));
+        SalarioGerenteR.setForeground(new java.awt.Color(255, 255, 255));
+        SalarioGerenteR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalarioGerenteRActionPerformed(evt);
+            }
+        });
+        getContentPane().add(SalarioGerenteR, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 120, 60, -1));
+
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/Sirve2.png"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 490));
@@ -865,17 +885,17 @@ public class Interfaz extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SalarioGerenteRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalarioGerenteRActionPerformed
+    private void estadoGerenteRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estadoGerenteRActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SalarioGerenteRActionPerformed
+    }//GEN-LAST:event_estadoGerenteRActionPerformed
 
     private void FaltasGerenteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FaltasGerenteBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_FaltasGerenteBActionPerformed
 
-    private void SalarioGerenteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalarioGerenteBActionPerformed
+    private void estadoGerenteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estadoGerenteBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SalarioGerenteBActionPerformed
+    }//GEN-LAST:event_estadoGerenteBActionPerformed
 
     private void CostosBugattiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CostosBugattiActionPerformed
         // TODO add your handling code here:
@@ -1146,6 +1166,14 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_maxRuedasRActionPerformed
 
+    private void SalarioGerenteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalarioGerenteBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SalarioGerenteBActionPerformed
+
+    private void SalarioGerenteRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalarioGerenteRActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SalarioGerenteRActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
@@ -1205,6 +1233,8 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JTextField empRuedasB;
     public javax.swing.JTextField empRuedasR;
     private javax.swing.JLabel ensamblaRlabel;
+    public javax.swing.JTextField estadoGerenteB;
+    public javax.swing.JTextField estadoGerenteR;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel gananciasRlabel;
     private javax.swing.JLabel jLabel1;
