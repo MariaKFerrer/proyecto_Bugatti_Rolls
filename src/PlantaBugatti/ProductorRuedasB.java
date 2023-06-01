@@ -31,30 +31,32 @@ public class ProductorRuedasB extends Thread {
         while (activo) {
             try {
 
+                productor.acquire();
 
-                    productor.acquire();
+                if (0 <= num && num < 5) {
+                    this.sleep(PlantaB.DiaDuracion / 3);
+                } else {
+                    this.sleep(PlantaB.DiaDuracion / 5);
+                }
+                mutex.acquire();
 
-                    if (0 <= num && num < 5) {
-                        this.sleep(PlantaB.DiaDuracion / 3);
-                    } else {
-                        this.sleep(PlantaB.DiaDuracion / 5);
-                    }
-                    mutex.acquire();
+                if (PlantaB.Ruedas < PlantaB.ruedasDrive) {
                     drive.producirRuedas();
 
                     PlantaB.Ruedas++;
-//                    System.out.println("Ruedas: " + PlantaB.Ruedas);
-                    
-                    mutex.release();
-                    ensamblador.release();
+                }
 
+//                    System.out.println("Ruedas: " + PlantaB.Ruedas);
+                mutex.release();
+                ensamblador.release();
+                productor.release();
 
             } catch (Exception e) {
             }
         }
     }
-    
-    public void despRuedas(){
+
+    public void despRuedas() {
         activo = false;
     }
 

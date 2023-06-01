@@ -45,14 +45,15 @@ public class DirectorB extends Thread {
                     Thread.sleep(PlantaB.DiaDuracion);
 
                 } while (Day.day != diasParaEntrega);
-
+                Day.stopDay();
+                Day.day = PlantaB.DiasParaEntrega + 1;
                 reloj.acquire();
                 DIR = "DESPACHANDO";
                 Thread.sleep(PlantaB.DiaDuracion);
-                Day.day = PlantaB.DiasParaEntrega;
+                
                 DIR = "DESPACHADO";
                 CobrosB.stopCobros();
-                Day.stopDay();
+
                 Thread.sleep(PlantaB.DiaDuracion);
 
                 vehiculo.acquire();

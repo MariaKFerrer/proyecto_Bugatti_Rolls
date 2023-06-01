@@ -6,17 +6,18 @@
 package PlantaRolls;
 
 import java.util.concurrent.Semaphore;
+
 /**
  *
  * @author mkferrerteran
  */
 public class ProductorRuedasR extends Thread {
-    
+
     private Semaphore productor, mutex, ensamblador;
     private Drive drive;
     private boolean activo = true;
     private int num;
-    
+
     public ProductorRuedasR(Drive drive, Semaphore productor, Semaphore mutex, Semaphore ensamblador, int num) {
         this.productor = productor;
         this.mutex = mutex;
@@ -24,37 +25,38 @@ public class ProductorRuedasR extends Thread {
         this.drive = drive;
         this.num = num;
     }
-    
+
     @Override
     public void run() {
         while (activo) {
             try {
 
+                productor.acquire();
 
-                    productor.acquire();
+                if (0 <= num && num < 5) {
+                    this.sleep(PlantaR.DiaDuracion / 3);
+                } else {
+                    this.sleep(PlantaR.DiaDuracion / 5);
+                }
 
-                    if (0 <= num && num < 5) {
-                        this.sleep(PlantaR.DiaDuracion / 3);
-                    } else {
-                        this.sleep(PlantaR.DiaDuracion / 5);
-                    }
-                    mutex.acquire();
+                if (PlantaR.Ruedas < PlantaR.ruedasDrive) {
                     drive.producirRuedas();
 
                     PlantaR.Ruedas++;
-//                    System.out.println("Ruedas: " + PlantaB.Ruedas);
-                    
-                    mutex.release();
-                    ensamblador.release();
+                }
+                mutex.acquire();
 
+//                    System.out.println("Ruedas: " + PlantaB.Ruedas);
+                mutex.release();
+                ensamblador.release();
+                productor.release();
 
             } catch (Exception e) {
             }
         }
     }
-    
-    public void despRuedas(){
+
+    public void despRuedas() {
         activo = false;
     }
 }
-

@@ -124,7 +124,7 @@ public class EnsambladorB extends Thread {
                         this.mMotor.release();
 //                        this.pMotor.release();
 
-//                        this.pRuedas.acquire();
+                        this.pRuedas.acquire();
                         this.mRuedas.acquire();
                         driveRuedas.consumirRuedas();
                         driveRuedas.consumirRuedas();
@@ -133,7 +133,7 @@ public class EnsambladorB extends Thread {
                         PlantaB.Ruedas = PlantaB.Ruedas - 4;
 //                        System.out.println( PlantaB.Ruedas);
                         this.mRuedas.release();
-//                        this.pRuedas.release();
+                        this.pRuedas.release();
 
                         vehiculo.acquire();
                         PlantaB.vehiculo++;

@@ -111,22 +111,20 @@ public class PlantaR {
         }
 
         DiaDuracion = DiaDuracion * 500;
-
+        line = doc.nextLine();
 
         DiasParaEntrega = parseInt(line.substring(17, 25).trim());
+        System.out.println(DiasParaEntrega);
         if (DiasParaEntrega < 1) {
             DiasParaEntrega = 30;
         }
         line = doc.nextLine();
-                
-
 
         chasisDrive = parseInt(line.substring(17, 25).trim());
         line = doc.nextLine();
         if (chasisDrive < 1) {
             chasisDrive = 25;
         }
-       
 
         carroceriaDrive = parseInt(line.substring(17, 25).trim());
         line = doc.nextLine(); //Almacenamiento de carroceria en el Drive
@@ -145,8 +143,7 @@ public class PlantaR {
         if (ruedasDrive < 1) {
             ruedasDrive = 35;
         }
-        
-         
+
         accesDrive = parseInt(line.substring(17, 25).trim());
         line = doc.nextLine(); //Almacenamiento de accesorios en el Drive
         if (accesDrive < 1) {
@@ -163,15 +160,12 @@ public class PlantaR {
         if (prodChasis < 1) {
             prodChasis = 1;
         }
-        
-
 
         prodCarroceria = parseInt(line.substring(17, 25).trim());
         line = doc.nextLine(); // Numero de productores de carroceria
         if (prodCarroceria < 1) {
             prodCarroceria = 1;
         }
-
 
         prodMotor = parseInt(line.substring(17, 25).trim());
         line = doc.nextLine(); // Numero de productores de motor
@@ -184,8 +178,6 @@ public class PlantaR {
         if (prodRuedas < 1) {
             prodRuedas = 1;
         }
-        
-       
 
         prodAcces = parseInt(line.substring(17, 25).trim());
         line = doc.nextLine(); // Numero de productores de accesorios
@@ -197,8 +189,6 @@ public class PlantaR {
         if (ensamblador < 1) {
             ensamblador = 1;
         }
-        
-        
 
         pChasis = new Semaphore(chasisDrive);
         pCarroceria = new Semaphore(carroceriaDrive);
@@ -298,44 +288,42 @@ public class PlantaR {
         vecEnsamblador[posEnsamb].start();
         posEnsamb++;
     }
-    
-    public void despProdChasis(){
+
+    public void despProdChasis() {
         posVecChasis--;
         vecProdChasis[posVecChasis].despChasis();
     }
-    
-    public void desProdCarroc(){
+
+    public void desProdCarroc() {
         posVecCarroc--;
         vecProdCarroc[posVecChasis].despCarr();
     }
-    
-    public void desProdMotor(){
+
+    public void desProdMotor() {
         posVecMotor--;
         vecProdMotor[posVecMotor].despMotor();
     }
-    
-    public void desProdRuedas(){
+
+    public void desProdRuedas() {
         posVecRuedas--;
         vecProdRuedas[posVecRuedas].despRuedas();
     }
-    
-    public void desProdAcc(){
+
+    public void desProdAcc() {
         posVecAcc--;
         vecProdAcc[posVecAcc].despAcc();
     }
-    
-    public void desEnsamblador(){
+
+    public void desEnsamblador() {
         posEnsamb--;
         vecEnsamblador[posEnsamb].despEnsamb();
     }
-    
-    
 
     public void cobros() {
         CobrosR cobros = new CobrosR();
         cobros.start();
     }
-    
+
     public static void stopAll() {
 
         for (int i = ensamblador; i > 0; i--) {  //1
@@ -379,12 +367,12 @@ public class PlantaR {
             vecProdRuedas[posVecRuedas].despRuedas();
 
         }
-        
+
         GerenteR.despGR();
 
         DayR.stopDay();
         CobrosR.stopCobros();
-        
+
         Actualizador.stopAct();
     }
 

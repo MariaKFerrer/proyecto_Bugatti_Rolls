@@ -16,45 +16,46 @@ public class DirectorR extends Thread {
     Semaphore reloj = new Semaphore(1);
     Semaphore vehiculo = new Semaphore(1);
     Semaphore VehiculoAcc;
-    
+
     public static int diasParaEntrega;
     public static String DIR;
     public static int contadorF1 = 0;
     public static int Mes = 30;
     private static boolean activo = true;
-    
-    public DirectorR (Semaphore Reloj, Semaphore Capitulo, Semaphore VehiculoAcc){
-            this.reloj = Reloj;
-            DIR = "";
-            this.VehiculoAcc = VehiculoAcc;
-        }
-    
+
+    public DirectorR(Semaphore Reloj, Semaphore Capitulo, Semaphore VehiculoAcc) {
+        this.reloj = Reloj;
+        DIR = "";
+        this.VehiculoAcc = VehiculoAcc;
+    }
+
     @Override
-    public void run(){
-        while(activo){
+    public void run() {
+        while (activo) {
             try {
-                do {             
-                    DIR ="Revisando";
-                    Thread.sleep(PlantaR.DiaDuracion/56);
-                    
-                    if("F1 TIME".equals(GerenteR.G)){
+                do {
+                    DIR = "Revisando";
+                    Thread.sleep(PlantaR.DiaDuracion / 56);
+
+                    if ("F1 TIME".equals(GerenteR.G)) {
 //                        System.out.println("Gerente atrapado viendo F1");
                         contadorF1++;
-                       
+
                     }
-                     DIR = "Trabajando";
-                    
+                    DIR = "Trabajando";
+
                     Thread.sleep(PlantaR.DiaDuracion);
-                    
+
                 } while (DayR.day != diasParaEntrega);
-                
+                DayR.stopDay();
+                DayR.day = PlantaR.DiasParaEntrega + 1;
                 reloj.acquire();
                 DIR = "DESPACHANDO";
                 Thread.sleep(PlantaR.DiaDuracion);
-                DayR.day = 0;
+
                 DIR = "DESPACHADO";
                 CobrosR.stopCobros();
-                DayR.stopDay();
+
                 Thread.sleep(PlantaR.DiaDuracion);
                 vehiculo.acquire();
                 System.out.println(PlantaR.ganancias);
@@ -74,8 +75,7 @@ public class DirectorR extends Thread {
                 PlantaR.ganancias = PlantaR.ganancias + PlantaR.gastos;
                 System.out.println("Gastos: " + Math.abs(PlantaR.gastos));
                 System.out.println("Ganancias: " + PlantaR.ganancias);
-                
-                
+
             } catch (Exception e) {
             }
         }
