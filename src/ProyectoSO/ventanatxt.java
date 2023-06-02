@@ -250,7 +250,7 @@ public class ventanatxt extends javax.swing.JFrame {
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Archivo TXT");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, -1, -1));
 
         modificarRolls.setForeground(new java.awt.Color(0, 102, 153));
         modificarRolls.setText("Modificar");
@@ -259,7 +259,7 @@ public class ventanatxt extends javax.swing.JFrame {
                 modificarRollsActionPerformed(evt);
             }
         });
-        getContentPane().add(modificarRolls, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, -1, -1));
+        getContentPane().add(modificarRolls, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, -1, -1));
 
         modificarB.setForeground(new java.awt.Color(0, 102, 153));
         modificarB.setText("Modificar");
@@ -268,124 +268,228 @@ public class ventanatxt extends javax.swing.JFrame {
                 modificarBActionPerformed(evt);
             }
         });
-        getContentPane().add(modificarB, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 380, -1, -1));
+        getContentPane().add(modificarB, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 430, -1, -1));
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Archivo TXT");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, -1, -1));
-        getContentPane().add(DiasParaEntrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 40, -1));
-        getContentPane().add(motorDrive, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 60, -1));
-        getContentPane().add(carroceriaDrive, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 80, -1));
-        getContentPane().add(accesDrive, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 80, -1));
-        getContentPane().add(prodChasis, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 50, -1));
-        getContentPane().add(prodMotor, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 80, -1));
-        getContentPane().add(prodRuedas, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 50, -1));
-        getContentPane().add(ensamblador, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, 50, -1));
-        getContentPane().add(prodAcces, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 40, -1));
-        getContentPane().add(prodCarroceria, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 250, 40, -1));
-        getContentPane().add(ruedasDrive, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 40, -1));
-        getContentPane().add(chasisDrive, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 40, -1));
-        getContentPane().add(DiaDuracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 80, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, -1, -1));
 
+        DiasParaEntrega.setBackground(new java.awt.Color(0, 102, 153));
+        DiasParaEntrega.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(DiasParaEntrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 60, -1));
+
+        motorDrive.setBackground(new java.awt.Color(0, 102, 153));
+        motorDrive.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(motorDrive, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, 60, -1));
+
+        carroceriaDrive.setBackground(new java.awt.Color(0, 102, 153));
+        carroceriaDrive.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(carroceriaDrive, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 60, -1));
+
+        accesDrive.setBackground(new java.awt.Color(0, 102, 153));
+        accesDrive.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(accesDrive, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, 60, -1));
+
+        prodChasis.setBackground(new java.awt.Color(0, 102, 153));
+        prodChasis.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(prodChasis, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 60, -1));
+
+        prodMotor.setBackground(new java.awt.Color(0, 102, 153));
+        prodMotor.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(prodMotor, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 60, -1));
+
+        prodRuedas.setBackground(new java.awt.Color(0, 102, 153));
+        prodRuedas.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(prodRuedas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 60, -1));
+
+        ensamblador.setBackground(new java.awt.Color(0, 102, 153));
+        ensamblador.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(ensamblador, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 100, -1));
+
+        prodAcces.setBackground(new java.awt.Color(0, 102, 153));
+        prodAcces.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(prodAcces, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, 60, -1));
+
+        prodCarroceria.setBackground(new java.awt.Color(0, 102, 153));
+        prodCarroceria.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(prodCarroceria, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 60, -1));
+
+        ruedasDrive.setBackground(new java.awt.Color(0, 102, 153));
+        ruedasDrive.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(ruedasDrive, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, 60, -1));
+
+        chasisDrive.setBackground(new java.awt.Color(0, 102, 153));
+        chasisDrive.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(chasisDrive, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 60, -1));
+
+        DiaDuracion.setBackground(new java.awt.Color(0, 102, 153));
+        DiaDuracion.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(DiaDuracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 60, -1));
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("DiaDuracion");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, -1, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, 30));
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("DiasParaEntrega");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, 30));
 
-        jLabel6.setText("chasisDrive");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, -1));
+        jLabel6.setBackground(new java.awt.Color(0, 102, 153));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("ChasisDrive");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, -1, 30));
 
-        jLabel7.setText("carroceriaDrive");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, -1, -1));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("CarroceriaDrive");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 130, 30));
 
-        jLabel8.setText("motorDrive");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, -1, -1));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("MotorDrive");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 90, 30));
 
-        jLabel9.setText("ruedasDrive");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("RuedasDrive");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, -1, 30));
 
-        jLabel10.setText("accesDrive");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("AccesDrive");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, -1, 30));
 
-        jLabel11.setText("prodChasis");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, -1, -1));
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("ProdChasis");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, 30));
 
-        jLabel12.setText("prodCarroceria");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("ProdCarroceria");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, 30));
 
-        jLabel13.setText("prodMotor");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("ProdMotor");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, 30));
 
-        jLabel14.setText("prodRuedas");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, -1, -1));
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("ProdRuedas");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, -1, 30));
 
-        jLabel15.setText("prodAcces");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("ProdAcces");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, -1, 30));
 
-        jLabel16.setText("ensamblador");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, -1, -1));
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Ensamblador");
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, -1, -1));
 
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("DiaDuracion");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, -1, -1));
-        getContentPane().add(DiaDuracionR, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 150, 30, -1));
-        getContentPane().add(DiasParaEntregaR, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 20, -1));
-        getContentPane().add(chasisDriveR, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 150, 30, -1));
-        getContentPane().add(carroceriaDriveR, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 190, 20, -1));
-        getContentPane().add(motorDriveR, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, 20, -1));
-        getContentPane().add(ruedasDriveR, new org.netbeans.lib.awtextra.AbsoluteConstraints(746, 190, 40, 20));
-        getContentPane().add(accesDriveR, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 240, 20, -1));
-        getContentPane().add(prodChasisR, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 240, 20, -1));
-        getContentPane().add(prodCarroceriaR, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 240, 20, -1));
-        getContentPane().add(prodMotorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 20, -1));
-        getContentPane().add(prodRuedasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 310, 20, -1));
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 166, -1, 20));
 
+        DiaDuracionR.setBackground(new java.awt.Color(0, 102, 153));
+        DiaDuracionR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(DiaDuracionR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 160, 60, -1));
+
+        DiasParaEntregaR.setBackground(new java.awt.Color(0, 102, 153));
+        DiasParaEntregaR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(DiasParaEntregaR, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 190, 60, -1));
+
+        chasisDriveR.setBackground(new java.awt.Color(0, 102, 153));
+        chasisDriveR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(chasisDriveR, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 250, 60, -1));
+
+        carroceriaDriveR.setBackground(new java.awt.Color(0, 102, 153));
+        carroceriaDriveR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(carroceriaDriveR, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 280, 60, -1));
+
+        motorDriveR.setBackground(new java.awt.Color(0, 102, 153));
+        motorDriveR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(motorDriveR, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 310, 60, -1));
+
+        ruedasDriveR.setBackground(new java.awt.Color(0, 102, 153));
+        ruedasDriveR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(ruedasDriveR, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 340, 60, -1));
+
+        accesDriveR.setBackground(new java.awt.Color(0, 102, 153));
+        accesDriveR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(accesDriveR, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 370, 60, -1));
+
+        prodChasisR.setBackground(new java.awt.Color(0, 102, 153));
+        prodChasisR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(prodChasisR, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 60, -1));
+
+        prodCarroceriaR.setBackground(new java.awt.Color(0, 102, 153));
+        prodCarroceriaR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(prodCarroceriaR, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 280, 60, -1));
+
+        prodMotorR.setBackground(new java.awt.Color(0, 102, 153));
+        prodMotorR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(prodMotorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 60, -1));
+
+        prodRuedasR.setBackground(new java.awt.Color(0, 102, 153));
+        prodRuedasR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(prodRuedasR, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 340, 60, -1));
+
+        prodAccesR.setBackground(new java.awt.Color(0, 102, 153));
+        prodAccesR.setForeground(new java.awt.Color(255, 255, 255));
         prodAccesR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prodAccesRActionPerformed(evt);
             }
         });
-        getContentPane().add(prodAccesR, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 310, 20, -1));
-        getContentPane().add(ensambladorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 380, 30, -1));
+        getContentPane().add(prodAccesR, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 370, 60, -1));
 
+        ensambladorR.setBackground(new java.awt.Color(0, 102, 153));
+        ensambladorR.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(ensambladorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, 100, -1));
+
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("DiasParaEntrega");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 150, -1, -1));
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 196, -1, 20));
 
-        jLabel19.setText("chasisDrive");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 150, -1, -1));
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("ChasisDrive");
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 256, -1, 20));
 
-        jLabel20.setText("carroceriaDrive");
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 190, -1, -1));
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("CarroceriaDrive");
+        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 280, -1, 30));
 
-        jLabel21.setText("motorDrive");
-        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, -1, -1));
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("MotorDrive");
+        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 310, -1, 30));
 
-        jLabel22.setText("ruedasDrive");
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, -1, -1));
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("RuedasDrive");
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 336, -1, 40));
 
-        jLabel23.setText("accesDrive");
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel23.setText("AccesDrive");
+        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 370, -1, 30));
 
-        jLabel24.setText("prodChasis");
-        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, -1, -1));
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setText("ProdChasis");
+        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 256, -1, 20));
 
-        jLabel25.setText("prodCarroceria");
-        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 240, 60, -1));
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setText("ProdCarroceria");
+        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 286, 100, 20));
 
-        jLabel26.setText("prodMotor");
-        getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 50, -1));
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("ProdMotor");
+        getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, 70, 30));
 
-        jLabel27.setText("prodRuedas");
-        getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 310, -1, -1));
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setText("ProdRuedas");
+        getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 346, -1, 20));
 
-        jLabel28.setText("prodAcces");
-        getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 310, -1, -1));
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setText("ProdAcces");
+        getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 376, -1, 20));
 
-        jLabel29.setText("ensamblador");
-        getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 380, -1, -1));
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel29.setText("Ensamblador");
+        getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 150, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/Sirve2.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 500));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, 500));
     }// </editor-fold>//GEN-END:initComponents
 
     private void modificarBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarBActionPerformed

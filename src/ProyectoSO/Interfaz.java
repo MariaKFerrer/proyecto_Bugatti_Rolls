@@ -223,15 +223,15 @@ public class Interfaz extends javax.swing.JFrame {
                 FaltasGerenteBActionPerformed(evt);
             }
         });
-        getContentPane().add(FaltasGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 60, -1));
+        getContentPane().add(FaltasGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 60, -1));
 
         labelFaltasGB.setForeground(new java.awt.Color(255, 255, 255));
         labelFaltasGB.setText("Faltas");
-        getContentPane().add(labelFaltasGB, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, 20));
+        getContentPane().add(labelFaltasGB, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, -1, 30));
 
         labelSalarioG.setForeground(new java.awt.Color(255, 255, 255));
         labelSalarioG.setText("Salario");
-        getContentPane().add(labelSalarioG, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, -1, -1));
+        getContentPane().add(labelSalarioG, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 96, -1, 20));
 
         labelDiasR.setForeground(new java.awt.Color(255, 255, 255));
         labelDiasR.setText("Dias Restantes");
@@ -244,7 +244,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         salarioGerR.setForeground(new java.awt.Color(255, 255, 255));
         salarioGerR.setText("Salario");
-        getContentPane().add(salarioGerR, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, -1, 10));
+        getContentPane().add(salarioGerR, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 100, -1, 10));
 
         LabelGerR1.setForeground(new java.awt.Color(255, 255, 255));
         LabelGerR1.setText("Gerente");
@@ -252,7 +252,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         LabelFaltasGerR.setForeground(new java.awt.Color(255, 255, 255));
         LabelFaltasGerR.setText("Faltas");
-        getContentPane().add(LabelFaltasGerR, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 100, -1, 10));
+        getContentPane().add(LabelFaltasGerR, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, -1, 10));
 
         estadoGerenteR.setBackground(new java.awt.Color(0, 102, 153));
         estadoGerenteR.setForeground(new java.awt.Color(255, 255, 255));
@@ -265,7 +265,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         FaltasGerenteR.setBackground(new java.awt.Color(0, 102, 153));
         FaltasGerenteR.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(FaltasGerenteR, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 90, 60, -1));
+        getContentPane().add(FaltasGerenteR, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 120, 60, -1));
 
         labeldirecR.setForeground(new java.awt.Color(255, 255, 255));
         labeldirecR.setText("Director");
@@ -871,7 +871,7 @@ public class Interfaz extends javax.swing.JFrame {
                 SalarioGerenteBActionPerformed(evt);
             }
         });
-        getContentPane().add(SalarioGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 60, -1));
+        getContentPane().add(SalarioGerenteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 60, -1));
 
         SalarioGerenteR.setBackground(new java.awt.Color(0, 102, 153));
         SalarioGerenteR.setForeground(new java.awt.Color(255, 255, 255));
@@ -880,7 +880,7 @@ public class Interfaz extends javax.swing.JFrame {
                 SalarioGerenteRActionPerformed(evt);
             }
         });
-        getContentPane().add(SalarioGerenteR, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 120, 60, -1));
+        getContentPane().add(SalarioGerenteR, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 90, 60, -1));
 
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("-");
