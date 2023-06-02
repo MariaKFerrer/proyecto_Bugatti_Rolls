@@ -24,3 +24,7 @@ hs_err_pid*
 replay_pid*
 /proyecto_Bugatti_Rolls/build/
 /proyecto_Bugatti_Rolls/dist/
+src/ProyectoSO/ventanatxt.form
+nbproject/private/private.xml
+nbproject/private/private.properties
+build/built-jar.properties
