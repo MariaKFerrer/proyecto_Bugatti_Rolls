@@ -75,10 +75,15 @@ public class DirectorR extends Thread {
                 PlantaR.ganancias = PlantaR.ganancias + PlantaR.gastos;
                 System.out.println("Gastos: " + Math.abs(PlantaR.gastos));
                 System.out.println("Ganancias: " + PlantaR.ganancias);
+                PlantaR.stopAll();
 
             } catch (Exception e) {
             }
         }
+    }
+    
+    public static void despDirR(){
+        activo = false;
     }
 
 }

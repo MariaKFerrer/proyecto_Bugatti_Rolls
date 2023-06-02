@@ -80,5 +80,9 @@ public class DirectorB extends Thread {
             }
         }
     }
+    
+    public static void despDirB(){
+        activo = false;
+    }
 
 }

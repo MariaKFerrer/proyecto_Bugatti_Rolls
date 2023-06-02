@@ -89,6 +89,7 @@ public class EnsambladorR extends Thread {
                 this.eCarroceria.acquire();
                 this.eMotor.acquire();
                 this.eRuedas.acquire();
+                contadorVehiculos.acquire();
 
                 if ((PlantaR.Chasis >= 3) && (PlantaR.Carroceria >= 2) && (PlantaR.Motor >= 4) && (PlantaR.Ruedas >= 6)) {
                     System.out.println("Ensamblando");
@@ -213,16 +214,14 @@ public class EnsambladorR extends Thread {
                         this.eAcces.release();
 //                        this.pAcces.release();
 
-                        vehiculoAcc.acquire();
+                        vehiculo.acquire();
                         PlantaR.vehiculoAcc++;
-                        vehiculoAcc.release();
+                        vehiculo.release();
                         System.out.println("Vehiculo con accesorios ensamblado");
 
                     }
 
-                    contadorVehiculos.acquire();
                     PlantaR.contadorVehiculos++;
-                    contadorVehiculos.release();
 
                     System.out.println("Vehiculos: " + PlantaR.vehiculo);
                     System.out.println("Vehiculos con accesorios: " + PlantaR.vehiculoAcc);
@@ -239,6 +238,7 @@ public class EnsambladorR extends Thread {
                 this.eCarroceria.release();
                 this.eMotor.release();
                 this.eRuedas.release();
+                contadorVehiculos.release();
 
             } catch (Exception e) {
                 System.out.println(e);

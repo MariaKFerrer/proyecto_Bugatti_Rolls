@@ -23,7 +23,7 @@ public class CobrosR extends Thread {
     @Override
     public void run() {
 
-        while (true) {
+        while (activo) {
             try {
                 Thread.sleep(diaDuracion / 24);
                 PlantaR.gastos = PlantaR.gastos - (10 * PlantaR.posVecChasis);

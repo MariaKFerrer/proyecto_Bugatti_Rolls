@@ -368,12 +368,13 @@ public class PlantaR {
 
         }
 
-        GerenteR.despGR();
+        
 
         DayR.stopDay();
         CobrosR.stopCobros();
-
-        Actualizador.stopAct();
+        DirectorR.despDirR();
+        GerenteR.despGR();
+//        Actualizador.stopAct();
     }
 
 }

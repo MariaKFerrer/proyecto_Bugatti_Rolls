@@ -370,7 +370,9 @@ public class PlantaB {
 
         Day.stopDay();
         CobrosB.stopCobros();
-        Actualizador.stopAct();
+        DirectorB.despDirB();
+        GerenteB.despGB();
+//        Actualizador.stopAct();
     }
 
 }
