@@ -28,3 +28,4 @@ src/ProyectoSO/ventanatxt.form
 nbproject/private/private.xml
 nbproject/private/private.properties
 build/built-jar.properties
+/dist/

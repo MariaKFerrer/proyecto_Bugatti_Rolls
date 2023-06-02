@@ -28,6 +28,8 @@ public class Main {
 //        plantar.Start();
 
           Interfaz inter = new Interfaz();
+//          ventanatxt i = new ventanatxt();
+//          i.setVisible(true);
 
 
     }

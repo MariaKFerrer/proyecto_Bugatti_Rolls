@@ -3,7 +3,7 @@ DiasParaEntrega: 0
 chasisDrive:     0           
 carroceriaDrive: 0           
 motorDrive:      0           
-ruedasDrive:     0           
+ruedasDrive:     12           
 accesDrive:      0           
 prodChasis:      0        
 prodCarroceria:  0          

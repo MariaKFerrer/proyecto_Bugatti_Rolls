@@ -20,7 +20,7 @@ public class Interfaz extends javax.swing.JFrame {
     public Interfaz() throws FileNotFoundException, InterruptedException, ParseException {
         initComponents();
         this.setLocationRelativeTo(null);
-//        this.setResizable(false);
+        this.setResizable(false);
         this.setVisible(true);
 
         this.plantaB = new PlantaB(5);
@@ -1196,7 +1196,12 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_SalarioGerenteRActionPerformed
 
     private void ventanatxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventanatxtActionPerformed
-        ventanatxt newframe = new ventanatxt();
+        ventanatxt newframe = null;
+        try {
+            newframe = new ventanatxt();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Interfaz.class.getName()).log(Level.SEVERE, null, ex);
+        }
         newframe.setVisible(true);
     }//GEN-LAST:event_ventanatxtActionPerformed
 
